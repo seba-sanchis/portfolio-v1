@@ -23,6 +23,7 @@ row-gap: 3rem;
 }
 
 `
+
 export const BlogCard = styled.div`
   border-radius: 10px;
   background-color: #f8f9fa;
@@ -42,7 +43,6 @@ export const TitleContent = styled.div`
   z-index: 20;
   width: 100%;
 `;
-
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
@@ -70,7 +70,6 @@ export const Intro = styled.div`
   line-height: 18px;
 `;
 
-
 export const CardInfo = styled.p`
   width: 100%;
   padding: 0 50px;
@@ -83,7 +82,6 @@ export const CardInfo = styled.p`
     padding:.3rem
 }
 `;
-
 
 export const UtilityList = styled.ul`
   list-style-type: none;
@@ -111,6 +109,7 @@ display: flex;
 justify-content: space-around;
 padding: 2rem;
 `
+
 export const Tag = styled.li`
 color: #3C4043;
 font-size: 1.5rem;

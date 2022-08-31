@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub,  AiFillLinkedin, AiFillFilePdf } from 'react-icons/ai';
+import { AiOutlineMenu, AiFillGithub,  AiFillLinkedin, AiFillFilePdf } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
 
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
+import { Container, Div1, Div2, Div3, Menu, NavLink, SocialIcons, Span } from './HeaderStyles';
 
 const Header = () =>  (
   <Container>
     <Div1>
+      <Menu>
+        <AiOutlineMenu size="3rem" />
+      </Menu>
       <Link href="/">
         <a style={{ display: "flex", alignItems: "center", color: "#3c4043" }}>
           <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
