@@ -1,12 +1,12 @@
 import React from 'react';
 import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
+import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './SkillsStyles';
 
-const Technologies = () =>  (
-  <Section id="tech">
+const Skills = () =>  (
+  <Section id="skills">
     <br />
-    <SectionTitle>Technologies</SectionTitle>
+    <SectionTitle>Skills</SectionTitle>
     <SectionText>
       Jr. Full Stack Developer (MERN) with some experience in frontend-oriented web development languages such as React, Redux and Sass with the support of NodeJS and Express.
     </SectionText>
@@ -45,4 +45,4 @@ const Technologies = () =>  (
   </Section>
 );
 
-export default Technologies;
+export default Skills;

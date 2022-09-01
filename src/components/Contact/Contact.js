@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { Section, SectionTitle } from '../../styles/GlobalComponents';
-import { Box, Boxes, BoxNum, BoxText } from './AcomplishmentsStyles';
+import { Box, Boxes, BoxNum, BoxText } from './ContactStyles';
 import { data } from '../../constants/constants';
 
-const Acomplishments = () => (
-  <Section>
-    <SectionTitle>Personal acomplishments</SectionTitle>
+const Contact = () => (
+  <Section id="contact">
+    <SectionTitle>Contact me</SectionTitle>
     <Boxes>
       {data.map((card, index) => (
         <Box key={index}>
@@ -18,4 +18,4 @@ const Acomplishments = () => (
   </Section>
 );
 
-export default Acomplishments;
+export default Contact;

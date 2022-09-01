@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Section, SectionText, SectionTitle, Button } from '../../styles/GlobalComponents';
-import { LeftSection } from './HeroStyles';
+import { LeftSection } from './WelcomeStyles';
 
-const Hero = (props) => (
+const Welcome = (props) => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
@@ -11,11 +11,12 @@ const Hero = (props) => (
         my personal portfolio
       </SectionTitle>
       <SectionText>
-        I currently live in San Isidro, Buenos Aires and I am looking for a personal and professional challenge by undertaking dynamic and innovative projects.
+        Hi there, I'm Sebastian Sanchis 👋, <br />
+        Jr. Full Stack Developer (MERN) with some experience in frontend-oriented web development languages such as React, Redux and Sass with the support of NodeJS and Express.
       </SectionText>
       <Button onClick={() => window.location = ""}>Contact me</Button>
     </LeftSection>    
   </Section>
 );
 
-export default Hero;
+export default Welcome;

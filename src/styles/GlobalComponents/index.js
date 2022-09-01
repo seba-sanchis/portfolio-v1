@@ -10,6 +10,10 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  height: ${(props) => props.height ? "230px" : "auto" };
+  flex-wrap: ${(props) => props.height ? "wrap" : "nowrap" };
+  background-color: ${(props) => props.height ? "#E9E3DB" : "transparent" };
+  border-radius: 28px;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: 24px 48px 0;
@@ -27,7 +31,7 @@ export const Section = styled.section`
 export const SectionTitle = styled.h2`
   font-weight: 700;
   font-size: ${(props) => props.main ? '60px' : '40px'};
-  line-height: ${(props) => props.main ? '68px' : '64px'};
+  line-height: ${(props) => props.main ? '68px' : '48px'};
   width: max-content;
   max-width: 100%;
   margin-bottom: 16px;
@@ -55,7 +59,7 @@ export const SectionText = styled.p`
   max-width: 800px;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 300;
+  font-weight: 400;
   padding-bottom: 3.6rem;
 
   @media ${(props) => props.theme.breakpoints.tablet} {

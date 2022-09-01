@@ -16,6 +16,7 @@ export const ImageContainer = styled.div`
     padding: 0;
     margin-top: 40px;
   }
+  
   @media ${props => props.theme.breakpoints.md} {
     background-image: none;
     padding: 0;
@@ -42,7 +43,7 @@ export const List = styled.ul`
     margin: 64px 0;
     gap: 24px
   }
-  
+
   @media ${props => props.theme.breakpoints.sm}{
     display: flex;
     flex-direction: column;

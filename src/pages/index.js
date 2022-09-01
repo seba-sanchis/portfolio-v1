@@ -1,9 +1,9 @@
-import Acomplishments from '../components/Acomplishments/Acomplishments';
+import Contact from '../components/Contact/Contact';
 import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
-import Hero from '../components/Hero/Hero';
+import Welcome from '../components/Welcome/Welcome';
 import Projects from '../components/Projects/Projects';
-import Technologies from '../components/Technologies/Technologies';
-import Timeline from '../components/TimeLine/TimeLine';
+import Skills from '../components/Skills/Skills';
+import About from '../components/About/About';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 
@@ -11,13 +11,13 @@ const Home = () => {
   return (
     <Layout>
       <Section grid>
-        <Hero />
+        <Welcome />
         <BgAnimation />
       </Section>
+      <About />
       <Projects />
-      <Technologies />
-      <Timeline />
-      <Acomplishments />
+      <Skills />
+      <Contact />
     </Layout>
   );
 };

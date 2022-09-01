@@ -1,6 +1,12 @@
 
 import styled from 'styled-components'
 
+export const Portrait = styled.img`
+  display: flex;
+  width: 200px;
+  border-radius: 50%;
+`
+
 export const CarouselContainer = styled.ul`
   max-width: 1040px;
   background: #0F1624;

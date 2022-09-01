@@ -1,4 +1,5 @@
 import React from 'react';
+import { Section, SectionText, SectionTitle, Button } from '../../styles/GlobalComponents';
 
 const BackgroundAnimation = () => (
   <div>
