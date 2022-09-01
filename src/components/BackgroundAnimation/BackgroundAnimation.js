@@ -355,8 +355,8 @@ const BackgroundAnimation = () => (
           y2="338.272"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#5f6368" />
-          <stop offset="1" stopColor="#5f6368" stopOpacity="0" />
+          <stop stopColor="#e37400" />
+          <stop offset="1" stopColor="#e37400" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

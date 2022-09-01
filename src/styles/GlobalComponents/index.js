@@ -4,15 +4,14 @@ export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
   flex-direction: ${(props) => props.row ? "row" : "column" };
   padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
-  margin: 0 auto;
-  max-width: 1040px;
+  margin: ${(props) => props.main ? "0 auto" : "48px auto 0" };
   box-sizing: content-box;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
-  height: ${(props) => props.height ? "230px" : "auto" };
-  flex-wrap: ${(props) => props.height ? "wrap" : "nowrap" };
-  background-color: ${(props) => props.height ? "#E9E3DB" : "transparent" };
+  height: ${(props) => props.box ? "230px" : "auto" };
+  flex-wrap: ${(props) => props.box ? "wrap" : "nowrap" };
+  background-color: ${(props) => props.box ? "#E9E3DB" : "transparent" };
   border-radius: 28px;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
@@ -35,7 +34,7 @@ export const SectionTitle = styled.h2`
   width: max-content;
   max-width: 100%;
   margin-bottom: 16px;
-  padding: ${(props) => props.main ? '58px 0 16px' : '0'};
+  padding: ${(props) => props.main ? '48px 0 16px' : '0'};
 
   @media ${props => props.theme.breakpoints.tablet}{
     font-size: ${(props) => props.main ? '56px' : '48px'};
