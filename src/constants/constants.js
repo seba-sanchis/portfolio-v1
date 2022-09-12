@@ -37,10 +37,3 @@ export const education = [
   { year: 2022, text: "Payment Gateway Integration (Mercado Pago)", },
   { year: 2022, text: "Deployment with Amazon Web Services (AWS)", },
 ];
-
-export const data = [
-  { number: 0, text: 'text'},
-  { number: 0, text: 'text', },
-  { number: 0, text: 'text', },
-  { number: 0, text: 'text', }
-];

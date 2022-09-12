@@ -14,7 +14,7 @@ const Welcome = (props) => (
         Hi there, I'm Sebastian Sanchis 👋, <br />
         Jr. Full Stack Developer (MERN) with some experience in frontend-oriented web development languages such as React, Redux and Sass with the support of Node and Express.
       </SectionText>
-      <Button onClick={() => window.location = ""}>Contact me</Button>
+      <Button onClick={() => window.location = "#contact"}>Contact me</Button>
     </LeftSection>    
   </Section>
 );
