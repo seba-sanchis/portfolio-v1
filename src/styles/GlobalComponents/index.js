@@ -55,11 +55,11 @@ export const SectionTitle = styled.h2`
 `
 
 export const SectionText = styled.p`
-  max-width: 800px;
+  max-width: ${(props) => props.about ? "800px" : "1024px"};
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  padding-bottom: 3.6rem;
+  padding-bottom: 24px;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     max-width: 670px;

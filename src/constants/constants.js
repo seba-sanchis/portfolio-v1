@@ -1,44 +1,46 @@
-export const AboutData = { image: "/images/profile-sebastian_sanchis.jpg" };
+export const about = { image: "/images/profile-sebastian_sanchis.jpg" };
 
 export const projects = [
   {
-    title: "e-commerce",
+    title: "E-commerce",
     description: "Digital House integrative project developed over the course of 8 sprints under the SCRUM methodology.",
     image: '/images/e-commerce-m.png',
-    tags: ["JavaScript", "Express", "Node", "MySQL"],
-    source: "/",
-    visit: "https://github.com/seba-sanchis/e-commerce",
+    tags: ["MySQL", "Express", "Node", "Sequelize"],
+    source: "https://github.com/seba-sanchis/e-commerce",
+    visit: "/",
     id: 0,
   },
   {
-    title: 'social-media',
-    description:"description",
+    title: 'Social Media',
+    description:"Full CRUD app to upload your posts and manage them. You must first register or sign in with your Google account.",
     image: '/images/social-media-m.png',
-    tags: ["MongoDB", "Express", "React", "Redux", "Node"],
-    source: "/",
-    visit: "https://github.com/seba-sanchis/social-media",
+    tags: ["MongoDB", "Express", "React", "Redux", "Node", "Sass"],
+    source: "https://github.com/seba-sanchis/social-media",
+    visit: "/",
     id: 1,
   },
   {
-    title: 'portfolio',
-    description:"description",
+    title: 'Portfolio',
+    description:"SPA that allows you to upload your projects and share your skills. They can contact you through the form.",
     image: '/images/portfolio-m.png',
     tags: ['React', 'Next', 'styled-components', 'Node'],
-    source: "/",
-    visit: "https://github.com/seba-sanchis/portfolio",
+    source: "https://github.com/seba-sanchis/portfolio",
+    visit: "/",
     id: 2,
   },
 ];
 
-export const ExperienceData = [
-  { year: 2017, text: 'Graphic Designer', },
-  { year: 2020, text: 'UX Designer', },
-  { year: 2021, text: 'Web Project Manager', },
+export const education = [
+  { year: 2021, text: "UI/UX Designer", },
+  { year: 2022, text: "Full Stack Web Developer", },
+  { year: 2022, text: "Test-driven development (TDD)", },
+  { year: 2022, text: "Payment Gateway Integration (Mercado Pago)", },
+  { year: 2022, text: "Deployment with Amazon Web Services (AWS)", },
 ];
 
 export const data = [
-  { number: 20, text: 'text'},
-  { number: 1000, text: 'text', },
-  { number: 1900, text: 'text', },
-  { number: 5000, text: 'text', }
+  { number: 0, text: 'text'},
+  { number: 0, text: 'text', },
+  { number: 0, text: 'text', },
+  { number: 0, text: 'text', }
 ];

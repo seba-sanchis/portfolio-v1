@@ -67,7 +67,6 @@ export const Intro = styled.div`
   width: 170px;
   margin: 0 auto;
   color: #dce3e7;
-  font-family: "Droid Serif", serif;
   font-size: 13px;
   font-style: italic;
   line-height: 18px;
@@ -90,22 +89,39 @@ export const UtilityList = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: space-around;
   margin: 2.5rem 0;
 `;
 
-export const ExternalLinks = styled.a`
-  color: #3c4043;
+export const ExternalLinks1 = styled.a`
+  color: #fff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  padding: 6px 18px;
-  border: 2px solid #3c4043;
+  padding: 8px 20px;
   border-radius: 4px;
+  background-color: #1967D2;
+  transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);
 
   &:hover {
-    color: #fff;
-    background: #3c4043;
+    background: linear-gradient( 0deg, rgb(25 24 24 / 16%), rgb(25 24 24 / 16%) ), #1967d2;
+    box-shadow: 0 1px 2px rgb(66 63 63 / 30%), 0 1px 3px 1px rgb(66 63 63 / 15%);
+  }
+`;
+
+export const ExternalLinks2 = styled.a`
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1967D2;
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);
+  margin-left: 16px;
+
+  &:hover {
+    background: linear-gradient( 0deg, rgb(26 115 232 / 4%), rgb(26 115 232 / 4%) ), var(--theme-background-color, #fff);
   }
 `;
 
