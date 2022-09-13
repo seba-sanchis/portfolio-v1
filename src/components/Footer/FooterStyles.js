@@ -101,6 +101,7 @@ export const Slogan = styled.p`
 export const SocialContainer = styled.div`
   display: flex;
   align-items: center;
+  border-top: 1px solid #f2f2f2;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     justify-content: center;

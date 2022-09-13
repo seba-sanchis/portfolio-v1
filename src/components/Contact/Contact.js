@@ -2,8 +2,8 @@ import React, { useState, useRef } from 'react';
 
 import emailjs from '@emailjs/browser';
 
-import { Section, SectionTitle } from '../../styles/GlobalComponents';
-import { Form, InputContainer, Input, TextArea, Button, SuccessMessage } from './ContactStyles';
+import { Section, SectionTitle, Button } from '../../styles/GlobalComponents';
+import { Form, InputContainer, Input, TextArea, SuccessMessage } from './ContactStyles';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -41,13 +41,13 @@ const Contact = () => {
       {!formSubmitted ?
       <Form ref={form} onSubmit={sendEmail}>
         <InputContainer>
-          <Input type="text" placeholder="Your Name" name="name" value={name} onChange={handleChangeInput} />
+          <Input type="text" placeholder="Name" name="name" value={name} onChange={handleChangeInput} />
         </InputContainer>
         <InputContainer>
-          <Input type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+          <Input type="email" placeholder="Email" name="email" value={email} onChange={handleChangeInput} />
         </InputContainer>
-        <InputContainer>
-          <TextArea placeholder="Your Message" name="message" value={message} onChange={handleChangeInput} />
+        <InputContainer area>
+          <TextArea placeholder="Message" name="message" value={message} onChange={handleChangeInput} />
         </InputContainer>
         <Button type="submit">{loading ? "Sending" : "Send Message"}</Button>
       </Form>

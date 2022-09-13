@@ -117,8 +117,8 @@ export const SocialIcons = styled.a`
 color: #3c4043;
 display: flex;
 align-items: center;
-width: 24px;
-height: 24px;
+width: ${(props) => props.small ? "20px" : "24px"};
+height: ${(props) => props.small ? "20px" : "24px"};
 margin-left: 24px;
 
   &:hover {

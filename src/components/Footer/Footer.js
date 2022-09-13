@@ -7,29 +7,19 @@ import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTi
 const Footer = () => {
   return (
     <FooterWrapper>
-      <LinkList>
-        <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:00-0000-0000">00-0000-0000</LinkItem>
-        </LinkColumn>
-        <LinkColumn>
-          <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:seba.sanchis@gmail.com">seba.sanchis@gmail.com</LinkItem>
-        </LinkColumn>
-      </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>slogan text</Slogan>
+          <Slogan>Thanks for your time.</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/seba-sanchis">
-            <AiFillGithub size="3rem" />
+          <SocialIcons href="https://github.com/seba-sanchis" target="_blank" small>
+            <AiFillGithub size="3rem"/>
           </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/sebastian-sanchis/">
-            <AiFillLinkedin size="3rem" />
+          <SocialIcons href="https://www.linkedin.com/in/sebastian-sanchis/" target="_blank" small>
+            <AiFillLinkedin size="3rem"/>
           </SocialIcons>
-          <SocialIcons href="https://drive.google.com/file/d/1gB9A1LZdpYeXp_pepnQn0MWJRiM9o7jk/view?usp=sharing">
-            <AiFillFilePdf size="3rem" />
+          <SocialIcons href="https://drive.google.com/file/d/1gB9A1LZdpYeXp_pepnQn0MWJRiM9o7jk/view?usp=sharing" target="_blank" small>
+            <AiFillFilePdf size="3rem"/>
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
