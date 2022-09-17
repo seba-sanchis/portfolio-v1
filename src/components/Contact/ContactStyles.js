@@ -7,16 +7,15 @@ export const Form = styled.form`
 `
 
 export const InputContainer = styled.div`
-    border: 1px solid #dadce0;
+    border: ${(props) => props.error ? "1px solid #d93025" : "1px solid #dadce0"};
     border-radius: 4px;
-    height: ${(props) => props.area ? "200px" : "40px"};
+    height: ${(props) => props.area ? "168px" : "56px"};
     width: 500px;
     margin: 8px 0;
     display: flex;
     align-items: ${(props) => props.area ? "start" : "center"};
     &:focus-within {
-        border: 1px solid #8ab4f8;
-        background: #e8f0fe;
+        border: ${(props) => props.error ? "2px solid #d93025" : "2px solid #1967d2"};
     }
 `
 
@@ -24,42 +23,57 @@ export const Input = styled.input`
     border: none;
     outline: none;
     background: none;
-    padding: 0 8px;
     color: #202124;
-    letter-spacing: .25px;
-    font-size: 14px;
-    font-weight: 500px;
-    line-height: 20px;
-    caret-color: #0b57d0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400px;
+    padding: 13px 15px;
     height: 100%;
     width: 100%;
-    &::placeholder {
-        color: #202124;
-        letter-spacing: .25px;
-        opacity: .6;
-    }
+    display: flex;
+`
+
+export const Placeholder = styled.div`
+    background: #fff;
+    margin-top: ${(props) => props.area ? "15px" : ""};
+    margin-left: 8px;
+    color: ${(props) => props.error ? "#d93025" : props.blur ? "#1967d2" : "#5f6368"};
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 8px;
+    position: absolute;
+    transition: transform 150ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+    transform: ${(props) => props.focus ? "scale(0.75) translateY(-35px)" : ""};
+    transform-origin: bottom left;
 `
 
 export const TextArea = styled.textarea`
     border: none;
     outline: none;
     background: none;
-    padding: 8px;
+    padding: 13px 15px;
     color: #202124;
-    caret-color: #0b57d0;
-    letter-spacing: .25px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400px;
     height: 100%;
     width: 100%;
     resize: none;
-    &::placeholder {
-        color: #202124;
-        letter-spacing: .25px;
-        opacity: .6;
-    }
 `
 
 export const SuccessMessage = styled.h3`
 
+`
+
+export const ErrorContainer = styled.div`
+    align-items: flex-start;
+    color: #d93025;
+    display: flex;
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 2px;
+`
+
+export const Error = styled.span`
+    margin-left: 8px;
 `

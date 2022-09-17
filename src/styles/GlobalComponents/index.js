@@ -141,6 +141,7 @@ export const SecondaryBtn = styled.button`
 `
 
 export const Button = styled.button`
+  margin: ${(props) => props.margin ? "6px 0" : "0"};
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -149,7 +150,7 @@ export const Button = styled.button`
   top: 0;
   left: 0;
   padding: 8px 20px;
-  background: rgb(25, 103, 210);
+  background: #1967d2;
   transition: .4s ease;
   font-size: 16px;
   font-weight: 500;
