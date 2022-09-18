@@ -9,9 +9,6 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
-  height: ${(props) => props.box ? "230px" : "auto" };
-  flex-wrap: ${(props) => props.box ? "wrap" : "nowrap" };
-  background-color: ${(props) => props.box ? "#E9E3DB" : "transparent" };
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: 24px 48px 0;
@@ -22,7 +19,7 @@ export const Section = styled.section`
     padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
 
     width: calc(100vw - 32px);
-    flex-direction: column;
+    flex-direction: ${(props) => props.box ? "row" : "column" };
   }
 `
 
