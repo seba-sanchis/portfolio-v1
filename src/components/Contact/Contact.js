@@ -8,8 +8,8 @@ import { Form, InputContainer, Input, Placeholder, TextArea, SuccessMessage, Err
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+
   const [focusName, setFocusName] = useState(false);
   const [blurName, setBlurName] = useState(false);
   const [focusEmail, setFocusEmail] = useState(false);
@@ -26,32 +26,28 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // EmailJS
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
     setFormErrors(validate(formData));
-  };
+    setFormSubmitted(true);
 
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && formSubmitted) {
+    // EmailJS
+    if (Object.keys(formErrors).length === 0) {
       emailjs.sendForm(`${process.env.SERVICE_ID}`, `${process.env.TEMPLATE_ID}`, form.current, `${process.env.PUBLIC_KEY}`)
       .then((result) => {
           console.log(result.text);
-          setLoading(false);
-          setFormSubmitted(true);
       }, (error) => {
           console.log(error.text);
       });
     }
-  }, [formErrors]);
+  };
 
   // Validate
   const validate = () => {
     const errors = {};
-    const regex = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
     if (!name) {
       errors.errorName = "Completá este dato.";
@@ -70,7 +66,7 @@ const Contact = () => {
   return (
     <Section id="contact">
       <SectionTitle>Contact me</SectionTitle>
-      {!formSubmitted ?
+      {Object.keys(formErrors).length !== 0 || !formSubmitted ?
       <Form ref={form} onSubmit={handleSubmit} noValidate>
         {/* Input Name */}
         <InputContainer error={errorName}>
@@ -109,7 +105,7 @@ const Contact = () => {
         </ErrorContainer>
 
         {/* Submit button */}
-        <Button type="submit" margin>{loading ? "Sending" : "Send Message"}</Button>
+        <Button type="submit" margin>Send Message</Button>
       </Form>
       :
       <div>
