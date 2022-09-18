@@ -17,6 +17,10 @@ export const InputContainer = styled.div`
     &:focus-within {
         border: ${(props) => props.error ? "2px solid #d93025" : "2px solid #1967d2"};
     }
+
+    @media ${(props) => props.theme.breakpoints.mobile} {
+    width: 100%;
+  }
 `
 
 export const Input = styled.input`
