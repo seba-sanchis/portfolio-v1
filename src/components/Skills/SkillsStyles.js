@@ -27,6 +27,7 @@ export const ListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 
   @media ${props => props.theme.breakpoints.mobile}{
     display: flex;
@@ -38,22 +39,9 @@ export const ListTitle = styled.h4`
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  letter-spacing: 0.02em;
   color: #3C4043;
   margin-bottom: 8px;
   width: 100%;
-
-@media ${props => props.theme.breakpoints.tablet}{
-  font-size: 24px;
-  line-height: 28px;
-}
-
-@media ${props => props.theme.breakpoints.mobile}{
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.02em;
-  margin-bottom: 4px;
-}
 `
 
 export const ListParagraph = styled.p`

@@ -31,7 +31,7 @@ const Skills = () => {
 
   const handleScroll = () => {
     if (carouselRef.current) {
-      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * education.length);
+      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.9)) * education.length);
 
       setActiveItem(index);
     }
@@ -247,7 +247,7 @@ const Skills = () => {
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
       <>
         {education.map((item, index) => (
-          <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT - 1}>
+          <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT -1}>
             <CarouselItem
               index={index}
               id={`carousel__item-${index}`}
