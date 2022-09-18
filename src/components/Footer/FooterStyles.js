@@ -6,6 +6,7 @@ export const FooterWrapper = styled.section`
   padding: 2rem 48px 40px;
   margin: 1rem auto;
   box-sizing: content-box;
+  border-top: 1px solid #f2f2f2;
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     padding: 0 16px 48px;
@@ -101,7 +102,6 @@ export const Slogan = styled.p`
 export const SocialContainer = styled.div`
   display: flex;
   align-items: center;
-  border-top: 1px solid #f2f2f2;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     justify-content: center;
