@@ -62,7 +62,10 @@ export const TextArea = styled.textarea`
 `
 
 export const SuccessMessage = styled.h3`
-
+    font-size: 20px;
+    line-height: 26px;
+    color: #188038;
+    display: flex;
 `
 
 export const ErrorContainer = styled.div`

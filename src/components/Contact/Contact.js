@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 
 import { Section, SectionTitle, Button } from '../../styles/GlobalComponents';
 import { Form, InputContainer, Input, Placeholder, TextArea, SuccessMessage, ErrorContainer, Error } from './ContactStyles';
+import { BsCheckAll } from "react-icons/bs";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -71,7 +72,7 @@ const Contact = () => {
         {/* Input Name */}
         <InputContainer error={errorName}>
           <Input type="text" name="name" value={name} onChange={handleChangeInput} onFocus={() => {setFocusName(true), setBlurName(true)}} onBlur={name.length === 0 ? () => {setFocusName(false), setBlurName(false)} : () => setBlurName(false)} />
-          <Placeholder focus={focusName} blur={blurName} error={errorName}>Name</Placeholder>
+          <Placeholder focus={focusName || email.length !== 0} blur={blurName} error={errorName}>Name</Placeholder>
         </InputContainer>
         <ErrorContainer>
           {errorName &&
@@ -83,7 +84,7 @@ const Contact = () => {
         {/* Input Email */}
         <InputContainer error={errorEmail}>
           <Input type="email" name="email" value={email} onChange={handleChangeInput} onFocus={() => {setFocusEmail(true), setBlurEmail(true)}} onBlur={email.length === 0 ? () => {setFocusEmail(false), setBlurEmail(false)} : () => setBlurEmail(false)} />
-          <Placeholder focus={focusEmail} blur={blurEmail} error={errorEmail}>Email</Placeholder>
+          <Placeholder focus={focusEmail || email.length !== 0} blur={blurEmail} error={errorEmail}>Email</Placeholder>
         </InputContainer>
         <ErrorContainer>
           {errorEmail &&
@@ -109,7 +110,7 @@ const Contact = () => {
       </Form>
       :
       <div>
-        <SuccessMessage>Thank you for getting in touch!</SuccessMessage>
+        <SuccessMessage><BsCheckAll size={"3rem"}/>Message sent!</SuccessMessage>
       </div>
       }
     </Section>

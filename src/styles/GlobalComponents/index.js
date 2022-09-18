@@ -12,7 +12,6 @@ export const Section = styled.section`
   height: ${(props) => props.box ? "230px" : "auto" };
   flex-wrap: ${(props) => props.box ? "wrap" : "nowrap" };
   background-color: ${(props) => props.box ? "#E9E3DB" : "transparent" };
-  border-radius: 28px;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: 24px 48px 0;
