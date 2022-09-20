@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     title: 'Portfolio',
-    description:"SPA that allows you to upload your projects and share your skills. They can contact you through the form.",
+    description:"SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
     image: '/images/portfolio-m.png',
     tags: ['React', 'Next', 'styled-components', 'Node'],
     source: "https://github.com/seba-sanchis/portfolio",
