@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { DiJavascript1, DiCss3, DiHtml5, DiSass } from "react-icons/di";
 import { FaUserCheck } from "react-icons/fa";
 import { GoBrowser, GoDatabase } from "react-icons/go";
-import { SiAmazonaws, SiGooglecloud, SiNextdotjs, SiReact, SiRedux, SiStyledcomponents, SiExpress, SiJest, SiMongodb, SiMysql, SiNodedotjs, SiSequelize, SiAdobexd, SiFigma, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiAmazonaws, SiGooglecloud, SiNextdotjs, SiReact, SiRedux, SiStyledcomponents, SiExpress, SiJest, SiMongodb, SiMysql, SiNodedotjs, SiSequelize, SiAdobexd, SiFigma, SiInvision, SiSketch, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 import { Section, SectionText, SectionTitle } from "../../styles/GlobalComponents";
 import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode, List, ListContainer, ListItem, ListParagraph, ListTitle, SocialIcons } from "./SkillsStyles";
@@ -239,6 +239,20 @@ const Skills = () => {
                 <SiFigma size="3rem" />
               </SocialIcons>
               Figma
+            </ListParagraph>
+
+            <ListParagraph >
+              <SocialIcons href="https://github.com/seba-sanchis">
+                <SiInvision size="3rem" />
+              </SocialIcons>
+              Invision
+            </ListParagraph>
+            <ListParagraph >
+
+              <SocialIcons href="https://github.com/seba-sanchis">
+                <SiSketch size="3rem" />
+              </SocialIcons>
+              Sketch
             </ListParagraph>
 
           </ListContainer>

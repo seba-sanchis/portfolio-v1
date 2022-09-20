@@ -7,19 +7,9 @@ export const List = styled.ul`
   gap: 0;
   margin: 24px;
   
-  @media ${props => props.theme.breakpoints.laptop}{
-    margin: 64px 0;
-  }
-
-  @media ${props => props.theme.breakpoints.tablet}{
-    margin: 64px 0;
-    gap: 24px
-  }
-
   @media ${props => props.theme.breakpoints.mobile}{
     display: flex;
     flex-direction: column;
-    margin: 32px 0;
   }
 `
 

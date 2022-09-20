@@ -16,15 +16,15 @@ export const Img = styled.img`
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 3rem;
+  padding: 8px;
   justify-content: center;
-  column-gap: 2rem;
-  row-gap: 3rem;
+  column-gap: 8px;
+  row-gap: 8px;
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 8px;
     padding-bottom: 0;
   }
 `;
@@ -78,18 +78,14 @@ export const CardInfo = styled.p`
   line-height: 20px;
   letter-spacing: 0.2px;
   text-align: left;
-  margin-bottom: 8px;
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: 0.3rem;
-  }
+  margin-bottom: 12px;
 `;
 
 export const UtilityList = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
-  margin: 2.5rem 0;
+  margin: 24px 0;
 `;
 
 export const ExternalLinks1 = styled.a`
@@ -97,7 +93,7 @@ export const ExternalLinks1 = styled.a`
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  padding: 8px 20px;
+  padding: 12px 20px;
   border-radius: 4px;
   background-color: #1967D2;
   transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);

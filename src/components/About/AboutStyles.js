@@ -11,7 +11,7 @@ export const TextContainer = styled.div`
   border-radius: 28px;
   padding: 24px 48px;
 
-  @media ${(props) => props.theme.breakpoints.mobile} {
+  @media ${(props) => props.theme.breakpoints.tablet} {
     height: 100%;
     align-items: center;
   }
