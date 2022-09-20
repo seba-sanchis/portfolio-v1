@@ -34,7 +34,7 @@ export const ListTitle = styled.h4`
   width: 100%;
 `
 
-export const ListParagraph = styled.p`
+export const ListParagraph = styled.div`
   font-size: ${(props) => props.long ? "14px" : "16px"};
   line-height: 24px;
   color: #3C4043;
