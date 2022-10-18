@@ -1,73 +1,96 @@
 import styled from 'styled-components'
 
 export const List = styled.ul`
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin: 24px;
-  
-  @media ${props => props.theme.breakpoints.mobile}{
-    display: flex;
-    flex-direction: column;
-  }
+  width: 1024px;
+  border-bottom: 1px solid #dadce0;
+`
+
+export const ListItems = styled.li`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+`
+
+export const ListItem = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  border-top: ${(props) => props.top ? "0" : "1px solid #dadce0" };
+`
+
+export const ListTitle = styled.h4`
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: initial;
+  line-height: 24px;
+  color: #1a73e8;
+  flex: 1 1 auto;
+  align-self: center;
+  margin-left: 8px;
+`
+
+export const ToggleButton = styled.button`
+  width: 36px;
+  height: 36px;
+  padding: 0 4px;
+  border: none;
+  background: none;
+  color: #1a73e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 `
 
 export const ListContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  padding: 28px 0 27px;
   width: 100%;
+  border-top: 1px solid #dadce0;
+  cursor: pointer;
+  
+  &:focus {
+    border-bottom: 2px solid #174ea6;
+  }
 
-  @media ${props => props.theme.breakpoints.mobile}{
-    display: flex;
-    margin-left: 18px;
+  &:focus ${ListTitle} {
+    color: #174ea6;
+  }
+
+  &:focus ${ToggleButton} {
+    color: #174ea6;
+  }
+
+  &:hover ${ListTitle} {
+    color: #174ea6;
+  }
+
+  &:hover ${ToggleButton} {
+    color: #174ea6;
   }
 `
 
-export const ListTitle = styled.h4`
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  color: #3C4043;
-  margin-bottom: 8px;
+export const ListContent = styled.div`
+  display: flex;
+  border-top: 1px solid #dadce0;
   width: 100%;
+  padding: 24px 2px;
+  display: grid;
+  grid-template-columns: repeat(4,minmax(5px,1fr));
+  grid-column-gap: 48px;
 `
 
-export const ListParagraph = styled.div`
-  font-size: ${(props) => props.long ? "14px" : "16px"};
+export const ListParagraph = styled.p`
+  font-size: 16px;
   line-height: 24px;
   color: #3C4043;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 24px 24px 0;
-
-  @media ${props => props.theme.breakpoints.tablet}{
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  @media ${props => props.theme.breakpoints.mobile}{
-    font-size: 12px;
-    line-height: 20px;
-  }
-`
-
-export const ListItem = styled.li`
-  max-width: 345px;
-  display: flex;
-  flex-direction: column;
-
-@media ${props => props.theme.breakpoints.tablet}{
-  max-width: 203px;
-}
-
-@media ${props => props.theme.breakpoints.mobile}{
-  margin-bottom: 14px;
-  max-width: 320px;
-  flex-direction: row;
-}
+  padding: 16px 0 16px 0;
+  margin-bottom: auto;
+  margin-left: 16px;
+  margin-top: auto;
 `
 
 export const ListIcon = styled.img`
