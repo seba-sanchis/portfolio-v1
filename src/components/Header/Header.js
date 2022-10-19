@@ -1,11 +1,25 @@
-import Link from 'next/link';
-import React from 'react';
-import { AiOutlineMenu, AiFillGithub,  AiFillLinkedin, AiFillFilePdf } from 'react-icons/ai';
-import { DiCssdeck } from 'react-icons/di';
+import Link from "next/link";
+import React from "react";
+import {
+  AiOutlineMenu,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillFilePdf,
+} from "react-icons/ai";
+import { DiCssdeck } from "react-icons/di";
 
-import { Container, Div1, Div2, Div3, Menu, NavLink, SocialIcons, Span } from './HeaderStyles';
+import {
+  Container,
+  Div1,
+  Div2,
+  Div3,
+  Menu,
+  NavLink,
+  SocialIcons,
+  Span,
+} from "./HeaderStyles";
 
-const Header = () =>  (
+const Header = () => (
   <Container>
     <Div1>
       <Menu>
@@ -30,8 +44,15 @@ const Header = () =>  (
       </li>
       <li>
         <Link href="#skills">
-          <NavLink>Skills & Education</NavLink>
+          <NavLink>Skills</NavLink>
         </Link>
+      </li>
+      <li>
+        <Link href="#education">
+          <NavLink>Education</NavLink>
+        </Link>
+      </li>
+      <li>
         <Link href="#contact">
           <NavLink>Contact</NavLink>
         </Link>
@@ -41,10 +62,16 @@ const Header = () =>  (
       <SocialIcons href="https://github.com/seba-sanchis" target="_blank">
         <AiFillGithub size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://www.linkedin.com/in/sebastian-sanchis/" target="_blank">
+      <SocialIcons
+        href="https://www.linkedin.com/in/sebastian-sanchis/"
+        target="_blank"
+      >
         <AiFillLinkedin size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://drive.google.com/file/d/1gB9A1LZdpYeXp_pepnQn0MWJRiM9o7jk/view?usp=sharing" target="_blank">
+      <SocialIcons
+        href="https://drive.google.com/file/d/1gB9A1LZdpYeXp_pepnQn0MWJRiM9o7jk/view?usp=sharing"
+        target="_blank"
+      >
         <AiFillFilePdf size="3rem" />
       </SocialIcons>
     </Div3>

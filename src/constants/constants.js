@@ -30,10 +30,14 @@ export const projects = [
   },
 ];
 
+export const experience = [
+  { year: 2022, title: "Frontend Developer", text: "ConoSurIT", },
+];
+
 export const education = [
-  { year: 2021, text: "UI/UX Designer", },
-  { year: 2022, text: "Full Stack Web Developer", },
-  { year: 2022, text: "Test-driven development (TDD)", },
-  { year: 2022, text: "Payment Gateway Integration (Mercado Pago)", },
-  { year: 2022, text: "Deployment with Amazon Web Services (AWS)", },
+  { year: 2021, title: "Coder House", text: "UI/UX Designer", },
+  { year: 2022, title: "Digital House", text: "Full Stack Web Developer", },
+  { year: 2022, title: "Digital House", text: "Test-driven development (TDD)", },
+  { year: 2022, title: "Digital House", text: "Payment Gateway Integration (Mercado Pago)", },
+  { year: 2022, title: "Digital House", text: "Deployment with Amazon Web Services (AWS)", },
 ];

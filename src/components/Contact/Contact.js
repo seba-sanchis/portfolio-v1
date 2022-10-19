@@ -72,7 +72,7 @@ const Contact = () => {
         {/* Input Name */}
         <InputContainer error={errorName}>
           <Input type="text" name="name" value={name} onChange={handleChangeInput} onFocus={() => {setFocusName(true), setBlurName(true)}} onBlur={name.length === 0 ? () => {setFocusName(false), setBlurName(false)} : () => setBlurName(false)} />
-          <Placeholder focus={focusName || email.length !== 0} blur={blurName} error={errorName}>Name</Placeholder>
+          <Placeholder focus={focusName || name.length !== 0} blur={blurName} error={errorName}>Name</Placeholder>
         </InputContainer>
         <ErrorContainer>
           {errorName &&
