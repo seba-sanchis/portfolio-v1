@@ -88,7 +88,7 @@ export const UtilityList = styled.ul`
   margin: 24px 0;
 `;
 
-export const ExternalLinks1 = styled.a`
+export const ExternalButton = styled.button`
   color: #fff;
   font-size: 16px;
   line-height: 24px;
@@ -97,14 +97,20 @@ export const ExternalLinks1 = styled.a`
   border-radius: 4px;
   background-color: #1967D2;
   transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);
+  border: none;
+  cursor: pointer;
 
   &:hover {
     background: linear-gradient( 0deg, rgb(25 24 24 / 16%), rgb(25 24 24 / 16%) ), #1967d2;
     box-shadow: 0 1px 2px rgb(66 63 63 / 30%), 0 1px 3px 1px rgb(66 63 63 / 15%);
   }
+
+  &:disabled{
+    background-color: #dadce0;
+  }
 `;
 
-export const ExternalLinks2 = styled.a`
+export const ExternalLink = styled.a`
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;

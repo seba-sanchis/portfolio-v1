@@ -7,7 +7,7 @@ export const projects = [
     image: '/images/e-commerce-m.png',
     tags: ["MySQL", "Express", "Node", "Sequelize"],
     source: "https://github.com/seba-sanchis/e-commerce",
-    visit: "/",
+    visit: "url",
     id: 0,
   },
   {
@@ -16,7 +16,7 @@ export const projects = [
     image: '/images/social-media-m.png',
     tags: ["MongoDB", "Express", "React", "Redux", "Node", "Sass"],
     source: "https://github.com/seba-sanchis/social-media",
-    visit: "/",
+    visit: "url",
     id: 1,
   },
   {

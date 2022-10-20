@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BlogCard, CardInfo, ExternalLinks1, ExternalLinks2, GridContainer, HeaderThree, Tag, TagList, TitleContent, UtilityList, Img, ImgContainer } from "./ProjectsStyles";
+import { BlogCard, CardInfo, ExternalButton, ExternalLink, GridContainer, HeaderThree, Tag, TagList, TitleContent, UtilityList, Img, ImgContainer } from "./ProjectsStyles";
 import { HiChevronRight } from "react-icons/hi";
 import { Section, SectionTitle } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
@@ -26,8 +26,8 @@ const Projects = () => (
             </TagList>
           </div>
           <UtilityList>
-            <ExternalLinks1 href={visit} target="_blank">View</ExternalLinks1>
-            <ExternalLinks2 href={source} target="_blank">Source code <HiChevronRight /></ExternalLinks2>
+            <ExternalButton href={visit} disabled={visit=== "/"} target="_blank">View</ExternalButton>
+            <ExternalLink href={source} target="_blank">Source code <HiChevronRight /></ExternalLink>
           </UtilityList>
         </BlogCard>
       ))}
