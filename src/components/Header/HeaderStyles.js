@@ -1,5 +1,5 @@
-import { IoIosArrowDropdown } from 'react-icons/io';
-import styled from 'styled-components';
+import { IoIosArrowDropdown } from "react-icons/io";
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
@@ -75,7 +75,7 @@ export const Menu = styled.button`
   @media ${(props) => props.theme.breakpoints.tablet} {
     display: flex;
   }
-`
+`;
 
 // Navigation Links
 export const NavLink = styled.a`
@@ -99,8 +99,8 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   display: flex;
   align-self: center;
   transition: 0.3s ease;
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '.75')};
-  transform: ${({ isOpen }) => (isOpen ? 'scaleY(-1)' : 'scaleY(1)')};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : ".75")};
+  transform: ${({ isOpen }) => (isOpen ? "scaleY(-1)" : "scaleY(1)")};
 
   &:hover {
     opacity: 1;
@@ -112,14 +112,14 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   }
 `;
 
-// Social Icons 
+// Social Icons
 export const SocialIcons = styled.a`
-color: #3c4043;
-display: flex;
-align-items: center;
-width: ${(props) => props.small ? "20px" : "24px"};
-height: ${(props) => props.small ? "20px" : "24px"};
-margin-left: 24px;
+  color: #3c4043;
+  display: flex;
+  align-items: center;
+  width: ${(props) => (props.small ? "20px" : "24px")};
+  height: ${(props) => (props.small ? "20px" : "24px")};
+  margin-left: 24px;
 
   &:hover {
     color: #1967d2;
@@ -129,4 +129,4 @@ margin-left: 24px;
   @media ${(props) => props.theme.breakpoints.mobile} {
     margin-left: 8px;
   }
-`
+`;

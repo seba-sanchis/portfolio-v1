@@ -31,8 +31,9 @@ export const GridContainer = styled.section`
 
 export const BlogCard = styled.div`
   border-radius: 10px;
-  text-align: center;
   width: 290px;
+  justify-self: center;
+
   &:hover ${ImgContainer} {
     background-color: #f1eff0;
     transition: background-color 0.5s ease;
@@ -95,17 +96,18 @@ export const ExternalButton = styled.button`
   font-weight: 500;
   padding: 12px 20px;
   border-radius: 4px;
-  background-color: #1967D2;
+  background-color: #1967d2;
   transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);
   border: none;
   cursor: pointer;
 
   &:hover {
-    background: linear-gradient( 0deg, rgb(25 24 24 / 16%), rgb(25 24 24 / 16%) ), #1967d2;
+    background: linear-gradient(0deg, rgb(25 24 24 / 16%), rgb(25 24 24 / 16%)),
+      #1967d2;
     box-shadow: 0 1px 2px rgb(66 63 63 / 30%), 0 1px 3px 1px rgb(66 63 63 / 15%);
   }
 
-  &:disabled{
+  &:disabled {
     background-color: #dadce0;
   }
 `;
@@ -114,7 +116,7 @@ export const ExternalLink = styled.a`
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  color: #1967D2;
+  color: #1967d2;
   padding: 6px 8px;
   display: inline-flex;
   align-items: center;
@@ -123,7 +125,12 @@ export const ExternalLink = styled.a`
   margin-left: 16px;
 
   &:hover {
-    background: linear-gradient( 0deg, rgb(26 115 232 / 4%), rgb(26 115 232 / 4%) ), var(--theme-background-color, #fff);
+    background: linear-gradient(
+        0deg,
+        rgb(26 115 232 / 4%),
+        rgb(26 115 232 / 4%)
+      ),
+      var(--theme-background-color, #fff);
   }
 `;
 
