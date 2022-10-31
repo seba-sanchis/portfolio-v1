@@ -6,7 +6,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
-  height: 56px;
+  height: 64px;
   padding: 0 20px;
   align-items: center;
 
@@ -16,6 +16,11 @@ export const Container = styled.div`
     grid-template-rows: repeat(2, 60px);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
+    height: 55px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    height: 55px;
   }
 `;
 
@@ -41,6 +46,15 @@ export const Div2 = styled.div`
   @media ${(props) => props.theme.breakpoints.tablet} {
     display: none;
   }
+`;
+
+export const LineSelected = styled.div`
+  bottom: 0;
+  height: 2px;
+  position: absolute;
+  transform: translateZ(0);
+  will-change: right,left;
+  background-color: #4285f4;
 `;
 
 export const Div3 = styled.div`
@@ -82,10 +96,10 @@ export const NavLink = styled.a`
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: #3c4043;
+  color: #5f6368;
   margin-left: 20px;
   &:hover {
-    color: #1967d2;
+    color: #202124;;
     cursor: pointer;
   }
 

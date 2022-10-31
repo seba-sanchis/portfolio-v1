@@ -69,7 +69,6 @@ export const SectionText = styled.p`
 
 export const Button = styled.button`
   margin: ${(props) => props.margin ? "6px 0" : "0"};
-  border: none;
   border-radius: 4px;
   color: #fff;
   display: flex;
@@ -83,9 +82,11 @@ export const Button = styled.button`
   font-weight: 500;
   font-optical-sizing: none;
   line-height: 24px;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border: 1px solid transparent;
 
   &:hover {
     background: linear-gradient(0deg, rgba(25, 24, 24, 0.16), rgba(25, 24, 24, 0.16)), rgb(25, 103, 210);
@@ -97,6 +98,7 @@ export const Button = styled.button`
   &:active {
     background: linear-gradient(0deg, rgba(25, 24, 24, 0.2), rgba(25, 24, 24, 0.2)), rgb(25, 103, 210);
     box-shadow: rgb(66 63 63 / 30%) 0px 1px 2px, rgb(66 63 63 / 15%) 0px 2px 6px 2px;
+    border-color: #fff;
   }
 
   &:disabled{

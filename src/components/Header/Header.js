@@ -12,6 +12,7 @@ import {
   Container,
   Div1,
   Div2,
+  LineSelected,
   Div3,
   Menu,
   NavLink,
@@ -58,6 +59,8 @@ const Header = () => (
         </Link>
       </li>
     </Div2>
+    {/* <LineSelected style={false ? {display: "block", left: "0px", right: "684.25px"} : {display: "none", left: "0px", right: "684.25px"}}></LineSelected> */}
+
     <Div3>
       <SocialIcons href="https://github.com/seba-sanchis" target="_blank">
         <AiFillGithub size="3rem" />

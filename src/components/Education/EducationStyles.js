@@ -1,168 +1,61 @@
 import styled from "styled-components";
 
-export const CarouselContainer = styled.ul`
-  color: red;
-  max-width: 1024px;
-  padding: 0rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  overflow-x: hidden;
-  margin: 24px 0;
-
-  &:first-of-type {
-    margin-left: 0px;
-  }
-
-  //remove scrollbar
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    touch-action: pan-x;
-    justify-content: initial;
-    margin-bottom: 8px;
-  }
+export const EducationTabList = styled.ul`
+  display: grid;
+  grid-gap: 36px;
+  grid-template-columns: 1fr;
+  grid-column-start: 1;
+  grid-column-end: span 6;
+  grid-row-gap: 36px;
+  grid-row: 1;
+  padding: 0;
 `;
 
-export const CarouselMobileScrollNode = styled.div`
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    display: flex;
-    min-width: ${({ final }) => (final ? `120%;` : `min-content`)};
-  }
+export const EducationTab = styled.li`
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-left: 10px;
 `;
 
-export const CarouselItem = styled.div`
-  border-radius: 3px;
-  max-width: 196px;
+export const EducationTrack = styled.div`
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 4px;
+  height: 100%;
+  background: #f1f3f4;
 
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    max-width: 124px;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    transform: ${(props) => props.selected ? "scaleY(1)" : "scaleY(0)"};
+    transform-origin: top center;
+    background: #1a73e8;
   }
 
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    margin-left: 32px;
-    min-width: 120px;
-    padding: 4px;
-    align-content: start;
-    scroll-snap-align: start;
-    border-radius: 3px;
-    overflow: visible;
-    position: relative;
-    height: fit-content;
 
-    ${(props) =>
-      props.active === props.index ? `opacity: 1` : `opacity: 0.5`};
-  }
 `;
 
-export const CarouselItemHead = styled.h4`
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0.02em;
-  display: flex;
-  color: #3c4043;
-  margin-bottom: 8px;
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 4px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    font-size: 16px;
-    line-height: 24px;
-  }
+export const EducationInfo = styled.div`
+  color: #5f6368;
 `;
 
-export const CarouselItemImg = styled.svg`
-  margin-left: 21px;
-  width: 100%;
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    -webkit-mask-image: none;
-    margin-left: 16px;
-    overflow: visible;
-  }
+export const EducationTitle = styled.h3`
+  font-size: 22px;
+  line-height: 28px;
+  color: ${(props) => props.selected ? "#1a73e8" : null};
 `;
 
-export const CarouselItemTitle = styled.h3`
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
-  color: #3c4043;
-  padding-right: 16px;
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    font-size: 12px;
-    line-height: 18px;
-    padding-right: 32px;
-  }
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    font-size: 10px;
-    line-height: 16px;
-    padding-right: 0;
-  }
-`;
-
-export const CarouselItemText = styled.p`
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
-  color: #3c4043;
-  padding-right: 16px;
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    font-size: 12px;
-    line-height: 18px;
-    padding-right: 32px;
-  }
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    font-size: 10px;
-    line-height: 16px;
-    padding-right: 0;
-  }
-`;
-
-export const CarouselButtons = styled.div`
-  width: 288px;
-
-  display: none;
-  visibility: hidden;
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    display: flex;
-    visibility: visible;
-    margin-bottom: 48px;
-  }
-`;
-
-export const CarouselButton = styled.button`
-  box-sizing: border-box;
-  padding: 4px;
-  border: none;
-  cursor: pointer;
-  margin-right: 4px;
-  opacity: ${(props) => (props.active === props.index ? `1` : `.33`)};
-  transform: ${(props) =>
-    props.active === props.index ? `scale(1.6)` : `scale(1)`};
-
-  &:focus {
-    outline: none;
-  }
-`;
-
-export const CarouselButtonDot = styled.div`
-  background-color: #3c4043;
-  border-radius: 10px;
-  margin: auto;
-  width: 3px;
-  height: 3px;
+export const EducationText = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 `;

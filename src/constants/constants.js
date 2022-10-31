@@ -35,9 +35,9 @@ export const experience = [
 ];
 
 export const education = [
-  { year: 2021, title: "Coder House", text: "UI/UX Designer", },
-  { year: 2022, title: "Digital House", text: "Full Stack Web Developer", },
-  { year: 2022, title: "Digital House", text: "Test-driven development (TDD)", },
-  { year: 2022, title: "Digital House", text: "Payment Gateway Integration (Mercado Pago)", },
-  { year: 2022, title: "Digital House", text: "Deployment with Amazon Web Services (AWS)", },
+  { year: 2022, school: "Digital House", study: "Deployment with Amazon Web Services (AWS)", },
+  { year: 2022, school: "Digital House", study: "Payment Gateway Integration (Mercado Pago)", },
+  { year: 2022, school: "Digital House", study: "Test-driven development (TDD)", },
+  { year: 2022, school: "Digital House", study: "Full Stack Web Developer", },
+  { year: 2021, school: "Coder House", study: "UI/UX Designer", },
 ];
