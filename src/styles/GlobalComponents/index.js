@@ -3,23 +3,23 @@ import styled from 'styled-components'
 export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
   flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
-  margin: ${(props) => props.main ? "0 auto" : "48px auto 0" };
-  box-sizing: content-box;
+  padding: ${(props) => props.main ? null : "36px 48px" };
+  margin: 48px auto;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  background-color: ${(props) => props.color ? "#E9E3DB" : "#fff" };
+  border-radius: ${(props) => props.radius ? "28px" : null };
+  max-width: ${(props) => props.maxwith ? "1024px" : null };
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: 24px 48px 0;
-    flex-direction: column;
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+    padding: 16px 16px 0;
 
     width: calc(100vw - 32px);
-    flex-direction: ${(props) => props.box ? "row" : "column" };
   }
 `
 
@@ -28,7 +28,6 @@ export const SectionTitle = styled.h2`
   font-size: ${(props) => props.main ? '60px' : '40px'};
   line-height: ${(props) => props.main ? '68px' : '48px'};
   width: max-content;
-  max-width: 100%;
   margin-bottom: 16px;
   padding: ${(props) => props.main ? '48px 0 16px' : '0'};
 
@@ -46,16 +45,15 @@ export const SectionTitle = styled.h2`
     line-height: ${(props) => props.main ? '32px' : '40px'};
     margin-bottom: 8px;
     padding: ${(props) => props.main ? '16px 0 8px' : '0'};
-    max-width: 100%;
   }
 `
 
 export const SectionText = styled.p`
-  max-width: ${(props) => props.box ? "800px" : "1024px"};
+  max-width: ${(props) => props.maxwith ? "768px" : "1024px"};
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  padding-bottom: 24px;
+  padding-bottom: ${(props) => props.nopadding ? null : "24px"}; ;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     max-width: 670px;

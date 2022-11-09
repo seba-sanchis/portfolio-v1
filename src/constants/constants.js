@@ -35,9 +35,10 @@ export const experience = [
 ];
 
 export const education = [
-  { year: 2022, school: "Digital House", study: "Deployment with Amazon Web Services (AWS)", },
-  { year: 2022, school: "Digital House", study: "Payment Gateway Integration (Mercado Pago)", },
-  { year: 2022, school: "Digital House", study: "Test-driven development (TDD)", },
-  { year: 2022, school: "Digital House", study: "Full Stack Web Developer", },
-  { year: 2021, school: "Coder House", study: "UI/UX Designer", },
+  { startDate: "Nov 2022", endDate: "Nov 2022", school: "Digital House", study: "Object-Oriented Programming (OOP)", },
+  { startDate: "Oct 2022", endDate: "Oct 2022", school: "Digital House", study: "Deployment with Amazon Web Services (AWS)", },
+  { startDate: "Sep 2022", endDate: "Sep 2022", school: "Digital House", study: "Payment Gateway Integration (Mercado Pago)", },
+  { startDate: "Sep 2022", endDate: "Sep 2022", school: "Digital House", study: "Test-driven development (TDD)", },
+  { startDate: "Aug 2021", endDate: "Feb 2022", school: "Digital House", study: "Full Stack Web Developer", },
+  { startDate: "Dec 2020", endDate: "Jun 2021", school: "Coder House", study: "UI/UX Designer", },
 ];

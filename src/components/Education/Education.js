@@ -56,7 +56,7 @@ const Education = () => {
               <EducationTrack selected={index === selected}></EducationTrack>
               <EducationInfo>
                 <EducationTitle selected={index === selected}>{item.study}</EducationTitle>
-                <EducationText>{item.school}</EducationText>
+                <EducationText>{item.school}{` (${item.startDate} - ${item.endDate})`}</EducationText>
               </EducationInfo>
             </EducationTab>
           ))}
