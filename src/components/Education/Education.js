@@ -6,14 +6,19 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import {
+  EducationContainer,
   EducationTabList,
   EducationTab,
   EducationTrack,
   EducationInfo,
   EducationTitle,
   EducationText,
+  EducationDisplay,
+  EducationIcon,
+  EducationImage,
 } from "./EducationStyles";
 import { education } from "../../constants/constants";
+import { IoSchool } from "react-icons/io5";
 
 const Education = () => {
   const [seconds, setSeconds] = useState(0);
@@ -44,8 +49,8 @@ const Education = () => {
       <SectionText>
         These are the courses and workshops in which I trained.
       </SectionText>
-      <EducationTabList role="tablist">
-        <>
+      <EducationContainer>
+        <EducationTabList role="tablist">
           {education.map((item, index) => (
             <EducationTab
               index={index}
@@ -55,13 +60,33 @@ const Education = () => {
             >
               <EducationTrack selected={index === selected}></EducationTrack>
               <EducationInfo>
-                <EducationTitle selected={index === selected}>{item.study}</EducationTitle>
-                <EducationText>{item.school}{` (${item.startDate} - ${item.endDate})`}</EducationText>
+                <EducationTitle selected={index === selected}>
+                  {item.study}
+                </EducationTitle>
+                <EducationText>
+                  {item.school}
+                  {` (${item.startDate} - ${item.endDate})`}
+                </EducationText>
               </EducationInfo>
             </EducationTab>
           ))}
-        </>
-      </EducationTabList>
+        </EducationTabList>
+        <EducationDisplay>
+          <EducationIcon>
+            <IoSchool size="15rem" />
+          </EducationIcon>
+          {education.map((item, index) => (
+            <EducationImage
+              selected={index === selected}
+              index={index}
+              id={`education__item-${index}`}
+              role="tab"
+              aria-selected="false"
+              src={item.image}
+            />
+          ))}
+        </EducationDisplay>
+      </EducationContainer>
     </Section>
   );
 };

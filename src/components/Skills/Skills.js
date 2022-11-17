@@ -23,7 +23,6 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-
 import {
   Section,
   SectionText,
@@ -38,7 +37,7 @@ import {
   ToggleButton,
   ListContent,
   ListParagraph,
-  SocialIcons,
+  ListIcon,
 } from "./SkillsStyles";
 
 const Skills = () => {
@@ -72,86 +71,86 @@ const Skills = () => {
           {toggleList1 && (
             <ListContent>
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiAngular size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Angular</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <DiCss3 size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>CSS</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <DiHtml5 size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>HTML</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <DiJavascript1 size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>JavaScript</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiJest size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Jest</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiNextdotjs size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Next</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiReact size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>React</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiRedux size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Redux</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <DiSass size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Sass</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiStyledcomponents size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>styled-components</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiTailwindcss size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Tailwind CSS</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiTypescript size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Typescript</ListParagraph>
               </ListItem>
             </ListContent>
@@ -174,72 +173,72 @@ const Skills = () => {
           {toggleList2 && (
             <ListContent>
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiAmazonaws size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>AWS</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiExpress size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Express</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiGooglecloud size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>GCP</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <DiJavascript1 size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>JavaScript</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiJest size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Jest</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiMongodb size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>MongoDB</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiMysql size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>MySQL</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiNodedotjs size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Node</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiSequelize size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Sequelize</ListParagraph>
               </ListItem>
 
               <ListItem>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiTypescript size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Typescript</ListParagraph>
               </ListItem>
             </ListContent>
@@ -262,30 +261,30 @@ const Skills = () => {
           {toggleList3 && (
             <ListContent>
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiAdobexd size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Adobe Xd</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiFigma size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Figma</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiInvision size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Invision</ListParagraph>
               </ListItem>
 
               <ListItem top>
-                <SocialIcons href="https://github.com/seba-sanchis">
+                <ListIcon href="https://github.com/seba-sanchis">
                   <SiSketch size="3rem" />
-                </SocialIcons>
+                </ListIcon>
                 <ListParagraph>Sketch</ListParagraph>
               </ListItem>
             </ListContent>

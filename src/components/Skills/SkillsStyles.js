@@ -84,27 +84,8 @@ export const ListParagraph = styled.p`
   margin-top: auto;
 `;
 
-export const ListIcon = styled.img`
-  display: block;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 10px;
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 0px;
-  }
-`;
-
 // Social Icons
-export const SocialIcons = styled.div`
+export const ListIcon = styled.div`
   color: #3c4043;
   display: flex;
   align-items: center;

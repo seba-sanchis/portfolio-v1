@@ -8,7 +8,7 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
-  background-color: ${(props) => props.color ? "#E9E3DB" : "#fff" };
+  background-color: ${(props) => props.color ? "#ceead6" : "#fff" };
   border-radius: ${(props) => props.radius ? "28px" : null };
   max-width: ${(props) => props.maxwith ? "1024px" : null };
 
