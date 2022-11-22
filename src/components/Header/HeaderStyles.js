@@ -1,14 +1,24 @@
-import { IoIosArrowDropdown } from "react-icons/io";
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
+  background-color: #fff;
+  width: 100%;
   height: 64px;
   padding: 0 20px;
   align-items: center;
+  position: fixed;
+  transform: ${(props) =>
+    props.scrollDown ? "translate3d(0,-140px,0)" : "none"};
+  box-shadow: ${(props) =>
+    props.scrollUp && !props.scrollTop
+      ? "0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%)"
+      : "none"};
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     display: grid;
@@ -29,7 +39,7 @@ export const Span = styled.span`
 `;
 
 export const Div1 = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 1 / 1 / 2;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -39,9 +49,22 @@ export const Div1 = styled.div`
   }
 `;
 
-export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
+export const Sections = styled.ul`
+  grid-area: 1 / 2 / 1 / 4;
   display: flex;
+  margin-left: 23px;
+
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #5f6368;
+    padding: 0 12px;
+    &:hover {
+      color: #202124;
+      cursor: pointer;
+    }
+  }
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     display: none;
@@ -53,12 +76,12 @@ export const LineSelected = styled.div`
   height: 2px;
   position: absolute;
   transform: translateZ(0);
-  will-change: right,left;
+  will-change: right, left;
   background-color: #4285f4;
 `;
 
 export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
+  grid-area: 1 / 5 / 1 / 6;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -68,6 +91,7 @@ export const Div3 = styled.div`
     grid-area: 1 / 4 / 2 / 6;
   }
 `;
+
 // Mobile and tablet menu
 export const Menu = styled.button`
   display: none;
@@ -91,44 +115,9 @@ export const Menu = styled.button`
   }
 `;
 
-// Navigation Links
-export const NavLink = styled.a`
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #5f6368;
-  margin-left: 20px;
-  &:hover {
-    color: #202124;;
-    cursor: pointer;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: 0.5rem;
-  }
-`;
-
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
-  margin-left: 8px;
-  display: flex;
-  align-self: center;
-  transition: 0.3s ease;
-  opacity: ${({ isOpen }) => (isOpen ? "1" : ".75")};
-  transform: ${({ isOpen }) => (isOpen ? "scaleY(-1)" : "scaleY(1)")};
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    margin: 2px 0 0 2px;
-    width: 15px;
-  }
-`;
-
 // Social Icons
 export const SocialIcons = styled.a`
-  color: #3c4043;
+  color: #5f6368;
   display: flex;
   align-items: center;
   width: ${(props) => (props.small ? "20px" : "24px")};
@@ -136,7 +125,7 @@ export const SocialIcons = styled.a`
   margin-left: 24px;
 
   &:hover {
-    color: #1967d2;
+    color: #202124;
     cursor: pointer;
   }
 

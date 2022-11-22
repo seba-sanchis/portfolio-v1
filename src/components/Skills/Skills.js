@@ -47,7 +47,6 @@ const Skills = () => {
 
   return (
     <Section id="skills">
-      <br />
       <SectionTitle>Skills</SectionTitle>
       <SectionText>
         These are the skills that I have been learning since last year by taking

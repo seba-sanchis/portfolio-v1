@@ -44,7 +44,6 @@ const Education = () => {
 
   return (
     <Section id="education">
-      <br />
       <SectionTitle>Education</SectionTitle>
       <SectionText>
         These are the courses and workshops in which I trained.
@@ -57,6 +56,7 @@ const Education = () => {
               id={`education__item-${index}`}
               role="tab"
               aria-selected="false"
+              key={index}
             >
               <EducationTrack selected={index === selected}></EducationTrack>
               <EducationInfo>
@@ -83,6 +83,7 @@ const Education = () => {
               role="tab"
               aria-selected="false"
               src={item.image}
+              key={index}
             />
           ))}
         </EducationDisplay>

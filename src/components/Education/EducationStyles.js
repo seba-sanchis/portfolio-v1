@@ -73,6 +73,7 @@ export const EducationDisplay = styled.div`
   height: 326px;
   align-items: center;
   justify-content: space-between;
+  margin-left: 36px;
 `;
 
 export const EducationIcon = styled.div`

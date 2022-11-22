@@ -13,10 +13,9 @@ export const Img = styled.img`
   border-radius: 20px;
 `;
 
-export const GridContainer = styled.section`
+export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 8px;
   justify-content: center;
   column-gap: 8px;
   row-gap: 8px;
@@ -24,7 +23,6 @@ export const GridContainer = styled.section`
   @media ${(props) => props.theme.breakpoints.mobile} {
     display: flex;
     flex-direction: column;
-    padding: 8px;
     padding-bottom: 0;
   }
 `;
@@ -86,7 +84,7 @@ export const UtilityList = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
-  margin: 24px 0;
+  margin-top: 24px;
 `;
 
 export const ExternalButton = styled.button`

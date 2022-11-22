@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export const FooterWrapper = styled.section`
+export const FooterWrapper = styled.footer`
   width: 100%;
-  position: absolute;
   padding: 24px 48px;
   background: #f8f9fa;
   left: 0;

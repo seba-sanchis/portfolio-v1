@@ -1,7 +1,15 @@
 
 import styled from 'styled-components'
 
-export const TextContainer = styled.div`
+export const Container = styled.div`
+  display: flex;
+  background-color: #ceead6;
+  border-radius: 28px;
+  max-width: 1024px;
+  padding: 36px 48px;
+`
+
+export const LeftSection = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
