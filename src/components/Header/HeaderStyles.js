@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
+  grid-column-gap: 8px;
   background-color: #fff;
   width: 100%;
   height: 64px;
@@ -34,12 +34,8 @@ export const Container = styled.header`
   }
 `;
 
-export const Span = styled.span`
-  font-size: 2rem;
-`;
-
 export const Div1 = styled.div`
-  grid-area: 1 / 1 / 1 / 2;
+  grid-area: 1 / 2 / 1 / 4;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -49,10 +45,27 @@ export const Div1 = styled.div`
   }
 `;
 
-export const Sections = styled.ul`
-  grid-area: 1 / 2 / 1 / 4;
+export const Logo = styled.span`
+  font-size: 22px;
+  color: #5f6368;
+  font-weight: 400;
   display: flex;
-  margin-left: 23px;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const TextLogo = styled.span`
+  font-size: 22px;
+  color: #5f6368;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+`;
+
+export const Sections = styled.ul`
+  grid-area: 1 / 5 / 1 / 6;
+  display: flex;
+  justify-content: center;
 
   a {
     font-size: 14px;
@@ -81,7 +94,7 @@ export const LineSelected = styled.div`
 `;
 
 export const Div3 = styled.div`
-  grid-area: 1 / 5 / 1 / 6;
+  grid-area: 1 / 7 / 1 / 9;
   display: flex;
   justify-content: flex-end;
   align-items: center;

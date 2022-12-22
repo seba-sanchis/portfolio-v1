@@ -11,12 +11,13 @@ import { DiCssdeck } from "react-icons/di";
 import {
   Container,
   Div1,
+  TextLogo,
   Sections,
   LineSelected,
   Div3,
   Menu,
   SocialIcons,
-  Span,
+  Logo,
 } from "./HeaderStyles";
 
 const Header = () => {
@@ -59,11 +60,12 @@ const Header = () => {
           <AiOutlineMenu size="3rem" />
         </Menu>
         <Link href="/">
-          <a
-            style={{ display: "flex", alignItems: "center", color: "#3c4043" }}
-          >
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-          </a>
+          <>
+            <Logo>
+              <DiCssdeck size="3rem" />
+            </Logo>
+            <TextLogo>Sebastian Sanchis</TextLogo>
+          </>
         </Link>
       </Div1>
       <Sections>
@@ -75,6 +77,9 @@ const Header = () => {
         </li>
         <li>
           <Link href="#skills">Skills</Link>
+        </li>
+        <li>
+          <Link href="#experience">Experience</Link>
         </li>
         <li>
           <Link href="#education">Education</Link>

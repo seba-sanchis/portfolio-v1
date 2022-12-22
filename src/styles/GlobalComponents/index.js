@@ -22,13 +22,13 @@ export const Section = styled.section`
 `;
 
 export const SectionTitle = styled.h2`
-  font-weight: 700;
+  font-weight: ${(props) => (props.main ? "600" : "400")};
   font-size: ${(props) => (props.main ? "60px" : "40px")};
   line-height: ${(props) => (props.main ? "68px" : "48px")};
   width: max-content;
   margin-bottom: 16px;
   padding: ${(props) => (props.main ? "48px 0 16px" : "0")};
-
+  color: #202124;
   @media ${(props) => props.theme.breakpoints.tablet} {
     font-size: ${(props) => (props.main ? "56px" : "48px")};
     line-height: ${(props) => (props.main ? "56px" : "48px")};
