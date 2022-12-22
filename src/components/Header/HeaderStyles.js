@@ -52,14 +52,10 @@ export const Logo = styled.span`
   display: flex;
   align-items: center;
   cursor: pointer;
-`;
-
-export const TextLogo = styled.span`
-  font-size: 22px;
-  color: #5f6368;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
+  flex-shrink: 1;
+  svg {
+    min-width: 30px;
+  }
 `;
 
 export const Sections = styled.ul`

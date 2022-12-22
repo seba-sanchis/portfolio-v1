@@ -11,7 +11,6 @@ import { DiCssdeck } from "react-icons/di";
 import {
   Container,
   Div1,
-  TextLogo,
   Sections,
   LineSelected,
   Div3,
@@ -60,12 +59,10 @@ const Header = () => {
           <AiOutlineMenu size="3rem" />
         </Menu>
         <Link href="/">
-          <>
-            <Logo>
-              <DiCssdeck size="3rem" />
-            </Logo>
-            <TextLogo>Sebastian Sanchis</TextLogo>
-          </>
+          <Logo>
+            <DiCssdeck size="3rem" />
+            Sebastian Sanchis
+          </Logo>
         </Link>
       </Div1>
       <Sections>
