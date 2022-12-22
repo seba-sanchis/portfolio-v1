@@ -8,53 +8,21 @@ export const FooterWrapper = styled.footer`
   display: flex;
   justify-content: center;
   margin-top: 60px;
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: 0 16px 48px;
-    width: calc(100vw - 32px);
-  }
 `;
 
-export const SocialIconsContainer = styled.div`
+export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
   width: 100%;
 
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    display: flex;
-    justify-content: space-between;
-  }
-
   @media ${(props) => props.theme.breakpoints.mobile} {
-    display: flex;
-    width: 100%;
     flex-direction: column;
-  }
-`;
-
-export const CompanyContainer = styled.div`
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin-right: auto;
-  flex: 1 1 auto;
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    flex-direction: column;
-    align-items: baseline;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 32px;
-    align-items: center;
   }
 `;
 
 export const Slogan = styled.p`
-  color: #202124;
+  color: #5f6368;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: initial;
@@ -68,23 +36,18 @@ export const Slogan = styled.p`
   @media ${(props) => props.theme.breakpoints.mobile} {
     line-height: 22px;
     font-size: 14px;
-    min-width: 100px;
+    margin: 0 0 32px;
   }
 `;
 
 export const SocialContainer = styled.div`
   display: flex;
   align-items: center;
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    justify-content: center;
-    padding-right: 16px;
-    flex-wrap: wrap;
-  }
+  justify-content: center;
 `;
 
 export const SocialIcons = styled.a`
-  color: #202124;
+  color: #5f6368;
   display: flex;
   align-items: center;
   width: 24px;
@@ -92,11 +55,11 @@ export const SocialIcons = styled.a`
   margin-left: 24px;
 
   &:hover {
-    color: #1967d2;
+    color: #202124;
     cursor: pointer;
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    margin-left: 8px;
+    margin: 0 8px 0 8px;
   }
 `;

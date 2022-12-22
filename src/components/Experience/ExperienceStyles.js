@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Statement = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: initial;
   line-height: 28px;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container, LeftSection, Portrait } from './AboutStyles';
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
+import { Section, SectionTitle, SectionText } from '../../styles/GlobalComponents';
 import { about } from '../../constants/constants';
 
 const About = () => {

@@ -18,7 +18,7 @@ export const GridContainer = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
   column-gap: 8px;
-  row-gap: 8px;
+  row-gap: 32px;
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     display: flex;

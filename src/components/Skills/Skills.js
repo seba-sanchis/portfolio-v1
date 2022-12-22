@@ -69,28 +69,28 @@ const Skills = () => {
 
           {toggleList1 && (
             <ListContent>
-              <ListItem top>
+              <ListItem noborder>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiAngular size="3rem" />
                 </ListIcon>
                 <ListParagraph>Angular</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <DiCss3 size="3rem" />
                 </ListIcon>
                 <ListParagraph>CSS</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder border>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <DiHtml5 size="3rem" />
                 </ListIcon>
                 <ListParagraph>HTML</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder border>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <DiJavascript1 size="3rem" />
                 </ListIcon>
@@ -171,28 +171,28 @@ const Skills = () => {
           </ListContainer>
           {toggleList2 && (
             <ListContent>
-              <ListItem top>
+              <ListItem noborder>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiAmazonaws size="3rem" />
                 </ListIcon>
                 <ListParagraph>AWS</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiExpress size="3rem" />
                 </ListIcon>
                 <ListParagraph>Express</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder border>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiGooglecloud size="3rem" />
                 </ListIcon>
                 <ListParagraph>GCP</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder border>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <DiJavascript1 size="3rem" />
                 </ListIcon>
@@ -259,28 +259,28 @@ const Skills = () => {
           </ListContainer>
           {toggleList3 && (
             <ListContent>
-              <ListItem top>
+              <ListItem noborder>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiAdobexd size="3rem" />
                 </ListIcon>
                 <ListParagraph>Adobe Xd</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiFigma size="3rem" />
                 </ListIcon>
                 <ListParagraph>Figma</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder border>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiInvision size="3rem" />
                 </ListIcon>
                 <ListParagraph>Invision</ListParagraph>
               </ListItem>
 
-              <ListItem top>
+              <ListItem noborder border>
                 <ListIcon href="https://github.com/seba-sanchis">
                   <SiSketch size="3rem" />
                 </ListIcon>

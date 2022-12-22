@@ -52,15 +52,6 @@ export const SectionText = styled.p`
   line-height: 24px;
   font-weight: 400;
   padding-bottom: ${(props) => (props.nopadding ? null : "24px")};
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    max-width: 670px;
-    padding-bottom: 24px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    padding-bottom: 16px;
-  }
 `;
 
 export const Button = styled.button`

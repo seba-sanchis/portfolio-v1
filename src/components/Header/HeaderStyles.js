@@ -23,7 +23,6 @@ export const Container = styled.header`
   @media ${(props) => props.theme.breakpoints.mobile} {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
     height: 55px;
@@ -38,23 +37,10 @@ export const Div1 = styled.div`
   grid-area: 1 / 2 / 1 / 4;
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-items: center;
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     grid-area: 1 / 1 / 2 / 3;
-  }
-`;
-
-export const Logo = styled.span`
-  font-size: 22px;
-  color: #5f6368;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  flex-shrink: 1;
-  svg {
-    min-width: 30px;
   }
 `;
 
@@ -117,6 +103,7 @@ export const Menu = styled.button`
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     display: flex;
+    align-items: center;
   }
 
   @media ${(props) => props.theme.breakpoints.tablet} {

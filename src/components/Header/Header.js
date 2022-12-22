@@ -58,14 +58,11 @@ const Header = () => {
         <Menu>
           <AiOutlineMenu size="3rem" />
         </Menu>
-        <Link href="/">
-          <Logo>
-            <DiCssdeck size="3rem" />
-            Sebastian Sanchis
-          </Logo>
-        </Link>
       </Div1>
       <Sections>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
         <li>
           <Link href="#about">About</Link>
         </li>

@@ -53,8 +53,8 @@ export const EducationInfo = styled.div`
 `;
 
 export const EducationTitle = styled.h3`
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 26px;
   font-weight: 500;
   color: ${(props) => (props.selected ? "#1a73e8" : null)};
 `;
@@ -74,6 +74,10 @@ export const EducationDisplay = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-left: 36px;
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    display: none;
+  }
 `;
 
 export const EducationIcon = styled.div`

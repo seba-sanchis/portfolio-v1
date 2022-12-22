@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Section, SectionText, SectionTitle, Button } from '../../styles/GlobalComponents';
-import { LeftSection } from './WelcomeStyles';
+import { LeftSection } from './HomeStyles';
 
-const Welcome = (props) => (
+const Home = (props) => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
@@ -19,4 +19,4 @@ const Welcome = (props) => (
   </Section>
 );
 
-export default Welcome;
+export default Home;

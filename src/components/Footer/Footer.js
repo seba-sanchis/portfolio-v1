@@ -2,20 +2,17 @@ import React from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillFilePdf } from "react-icons/ai";
 
 import {
-  CompanyContainer,
   FooterWrapper,
   Slogan,
   SocialContainer,
-  SocialIconsContainer,
+  FooterContainer,
   SocialIcons,
 } from "./FooterStyles";
 
 const Footer = () => (
   <FooterWrapper>
-    <SocialIconsContainer>
-      <CompanyContainer>
-        <Slogan>Sebastian Sanchis. San Isidro, Buenos Aires, Argentina.</Slogan>
-      </CompanyContainer>
+    <FooterContainer>
+      <Slogan>Sebastian Sanchis. San Isidro, Buenos Aires, Argentina.</Slogan>
       <SocialContainer>
         <SocialIcons href="https://github.com/seba-sanchis" target="_blank">
           <AiFillGithub size="3rem" />
@@ -33,7 +30,7 @@ const Footer = () => (
           <AiFillFilePdf size="3rem" />
         </SocialIcons>
       </SocialContainer>
-    </SocialIconsContainer>
+    </FooterContainer>
   </FooterWrapper>
 );
 export default Footer;

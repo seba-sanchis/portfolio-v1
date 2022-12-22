@@ -15,7 +15,11 @@ export const ListItem = styled.div`
   display: flex;
   align-items: center;
   padding-left: 6px;
-  border-top: ${(props) => (props.top ? "0" : "1px solid #dadce0")};
+  border-top: ${(props) => (props.noborder ? null : "1px solid #dadce0")};
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    border-top: ${(props) => (props.border ? "1px solid #dadce0" : null)};
+  }
 `;
 
 export const ListTitle = styled.h4`
@@ -69,6 +73,10 @@ export const ListContent = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(5px, 1fr));
   grid-column-gap: 48px;
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    grid-template-columns: repeat(2, minmax(5px, 1fr));
+  }
 `;
 
 export const ListParagraph = styled.p`

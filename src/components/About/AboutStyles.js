@@ -7,6 +7,12 @@ export const Container = styled.div`
   border-radius: 28px;
   max-width: 1024px;
   padding: 36px 48px;
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 32px;
+  }
 `
 
 export const LeftSection = styled.div`
@@ -25,4 +31,7 @@ export const Portrait = styled.img`
   height: 200px;
   border-radius: 50%;
   margin-left: 48px;
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    margin-left: 0;
+  }
 `
