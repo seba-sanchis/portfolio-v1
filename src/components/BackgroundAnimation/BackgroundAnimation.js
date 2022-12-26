@@ -1,8 +1,8 @@
 import React from 'react';
-import { Section, SectionText, SectionTitle, Button } from '../../styles/GlobalComponents';
+import { Background } from "./BackgroundAnimationStyles";
 
 const BackgroundAnimation = () => (
-  <div>
+  <Background>
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
@@ -360,7 +360,7 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
-  </div>
+  </Background>
 );
 
 export default BackgroundAnimation;

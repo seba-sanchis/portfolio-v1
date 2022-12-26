@@ -75,6 +75,10 @@ export const EducationDisplay = styled.div`
   justify-content: space-between;
   margin-left: 36px;
 
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    display: none;
+  }
+
   @media ${(props) => props.theme.breakpoints.mobile} {
     display: none;
   }

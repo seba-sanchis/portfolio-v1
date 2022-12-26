@@ -10,6 +10,7 @@ export const Section = styled.section`
   grid-template-columns: 1fr 1fr;
   background-color: #fff;
   align-items: ${(props) => (props.center ? "center" : null)};
+  
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: 24px 48px 0;
   }
