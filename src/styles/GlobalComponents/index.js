@@ -3,21 +3,20 @@ import styled from "styled-components";
 export const Section = styled.section`
   display: ${(props) => (props.grid ? "grid" : "flex")};
   flex-direction: column;
-  padding: ${(props) => (props.main ? null : "117px 48px 27px")};
+  padding: ${(props) => (props.main ? null : "115px 48px 27px")};
   margin: 48px auto;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
   background-color: #fff;
   align-items: ${(props) => (props.center ? "center" : null)};
-  
+
   @media ${(props) => props.theme.breakpoints.tablet} {
-    padding: 24px 48px 0;
+    padding: ${(props) => (props.main ? null : "100px 48px 0")};
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: 16px 16px 0;
-
+    padding: ${(props) => (props.main ? null : "85px 16px 0")};
     width: calc(100vw - 32px);
   }
 `;
@@ -30,6 +29,7 @@ export const SectionTitle = styled.h2`
   margin-bottom: 16px;
   padding: ${(props) => (props.main ? "48px 0 16px" : "0")};
   color: #202124;
+
   @media ${(props) => props.theme.breakpoints.tablet} {
     font-size: ${(props) => (props.main ? "56px" : "48px")};
     line-height: ${(props) => (props.main ? "56px" : "48px")};
@@ -133,6 +133,7 @@ export const LinkContainer = styled.div`
   @media ${(props) => props.theme.breakpoints.tablet} {
     margin-left: ${({ large }) => (large ? "16px" : "8px")};
   }
+
   @media ${(props) => props.theme.breakpoints.mobile} {
     margin-left: ${({ large }) => (large ? "0" : "8px")};
   }

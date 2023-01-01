@@ -68,11 +68,24 @@ export const TextArea = styled.textarea`
   z-index: 2;
 `;
 
+export const SuccessContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 394px;
+`;
+
+export const Image = styled.img`
+  height: 130px;
+`;
+
 export const SuccessMessage = styled.h3`
+  display: flex;
+  font-weight: 400;
   font-size: 20px;
   line-height: 26px;
-  color: #188038;
-  display: flex;
+  justify-content: center;
 `;
 
 export const ErrorContainer = styled.div`

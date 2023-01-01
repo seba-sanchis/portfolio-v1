@@ -25,22 +25,23 @@ export const Container = styled.header`
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
-    height: 55px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    height: 55px;
   }
 `;
 
-export const Div1 = styled.div`
-  grid-area: 1 / 2 / 1 / 4;
-  display: flex;
+export const Menu = styled.div`
+  grid-area: 1 / 1 / 1 / 1;
+  display: none;
   flex-direction: row;
   align-items: center;
 
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    display: flex;
+    grid-area: 1 / 1 / 1 / 1;
+  }
+
   @media ${(props) => props.theme.breakpoints.mobile} {
-    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    grid-area: 1 / 1 / 1 / 1;
   }
 `;
 
@@ -75,44 +76,39 @@ export const LineSelected = styled.div`
   background-color: #4285f4;
 `;
 
-export const Div3 = styled.div`
+export const SocialIcons = styled.div`
   grid-area: 1 / 7 / 1 / 9;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    grid-area: 1 / 8 / 1 / 10;
+  }
+
   @media ${(props) => props.theme.breakpoints.mobile} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    grid-area: 1 / 4 / 1 / 6;
   }
 `;
 
 // Mobile and tablet menu
-export const Menu = styled.button`
-  display: none;
+export const MenuIcon = styled.button`
+  display: flex;
   border: none;
   background: none;
   color: #3c4043;
   width: 24px;
   height: 24px;
   margin-right: 20px;
+  align-items: center;
 
   & svg {
     align-items: center;
   }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    display: flex;
-    align-items: center;
-  }
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    display: flex;
-  }
 `;
 
 // Social Icons
-export const SocialIcons = styled.a`
+export const Icon = styled.a`
   color: #5f6368;
   display: flex;
   align-items: center;
@@ -126,6 +122,92 @@ export const SocialIcons = styled.a`
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    margin-left: 8px;
+    margin-left: 16px;
   }
+`;
+
+export const Sidenav = styled.div`
+  width: calc(100% - 56px);
+  max-width: 400px;
+  height: 100%;
+  background: #fff;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 56px;
+  position: fixed;
+  margin-right: 56px;
+  transform: ${(props) =>
+    props.active ? "translate3d(0,0,0)" : "translate3d(-100%,0,0)"};
+  box-shadow: ${(props) => (props.active ? "none" : "0 0 0 0 transparent")};
+  transition: ${(props) =>
+    props.active
+      ? "transform 0.35s cubic-bezier(0.24, 1, 0.32, 1)"
+      : "transform .3s ease,background .3s ease,box-shadow .3s ease"};
+  /* visibility: ${(props) => (props.active ? "visible" : "hidden")}; */
+  z-index: 6;
+`;
+
+export const NavHeader = styled.div`
+  display: flex;
+  align-items: center;
+  height: 64px;
+
+  &::after {
+    background-color: #dadce0;
+    content: " ";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 63px;
+    width: 100%;
+  }
+`;
+
+export const NavSections = styled.ul`
+  display: block;
+  padding-bottom: 23px;
+  padding-top: 30px;
+
+  & li {
+    display: flex;
+    height: 52px;
+    width: 100%;
+
+    & a {
+      display: flex;
+      align-items: center;
+      padding-left: 18px;
+      padding-right: 12px;
+      color: #5f6368;
+      height: 48px;
+      width: calc(100% - 8px);
+      line-height: 1.5;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.25px;
+      transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: #f8f9fa;
+        color: #202124;
+      }
+    }
+  }
+`;
+
+export const Backdrop = styled.div`
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: ${(props) => (props.active ? "visible" : "hidden")};
+  opacity: ${(props) => (props.active ? "1" : "0")};
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
 `;

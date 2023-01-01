@@ -2,9 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import emailjs from '@emailjs/browser';
 
-import { Section, SectionTitle, Button } from '../../styles/GlobalComponents';
-import { Form, InputContainer, Input, Placeholder, TextArea, SuccessMessage, ErrorContainer, Error } from './ContactStyles';
-import { BsCheckAll } from "react-icons/bs";
+import { Section, SectionTitle, SectionText, Button } from '../../styles/GlobalComponents';
+import { Form, InputContainer, Input, Placeholder, TextArea, SuccessContainer, Image, SuccessMessage, ErrorContainer, Error } from './ContactStyles';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -67,6 +66,7 @@ const Contact = () => {
   return (
     <Section id="contact">
       <SectionTitle>Contact me</SectionTitle>
+      <SectionText>I will be glad to answer as soon as possible.</SectionText>
       {Object.keys(formErrors).length !== 0 || !formSubmitted ?
       <Form ref={form} onSubmit={handleSubmit} noValidate>
         {/* Input Name */}
@@ -109,9 +109,10 @@ const Contact = () => {
         <Button type="submit" margin>Send Message</Button>
       </Form>
       :
-      <div>
-        <SuccessMessage><BsCheckAll size={"3rem"}/>Message sent!</SuccessMessage>
-      </div>
+      <SuccessContainer>
+        <Image src="/images/contact_email.png" />
+        <SuccessMessage>Message sent.</SuccessMessage>
+      </SuccessContainer>
       }
     </Section>
   );

@@ -31,6 +31,7 @@ export const Portrait = styled.img`
   height: 200px;
   border-radius: 50%;
   margin-left: 48px;
+  
   @media ${(props) => props.theme.breakpoints.mobile} {
     margin-left: 0;
   }

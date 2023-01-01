@@ -4,7 +4,7 @@ import { Section, SectionText, SectionTitle, Button } from '../../styles/GlobalC
 import { LeftSection } from './HomeStyles';
 
 const Home = (props) => (
-  <Section row nopadding>
+  <Section id="/" row nopadding>
     <LeftSection>
       <SectionTitle main center>
         Welcome to <br />
