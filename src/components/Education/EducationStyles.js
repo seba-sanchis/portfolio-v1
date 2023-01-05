@@ -22,6 +22,7 @@ export const EducationTab = styled.li`
   position: relative;
   padding-left: 24px;
   margin-left: 10px;
+  cursor: pointer;
 `;
 
 export const EducationTrack = styled.div`
@@ -59,18 +60,19 @@ export const EducationTitle = styled.h3`
   color: ${(props) => (props.selected ? "#1a73e8" : null)};
 `;
 
-export const EducationText = styled.p`
+export const EducationSubtitle = styled.p`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 `;
 
 export const EducationDisplay = styled.div`
-  display: flex;
-  background-color: #d2e3fc;
-  border-radius: 16px;
-  width: 526px;
-  height: 326px;
+  display: ${(props) => (props.selected ? "flex" : "none")};
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  width: 366px;
+  width: 415px;
+  height: 160px;
   align-items: center;
   justify-content: space-between;
   margin-left: 36px;
@@ -84,28 +86,99 @@ export const EducationDisplay = styled.div`
   }
 `;
 
-export const EducationIcon = styled.div`
+export const EducationInstitution = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 12px 15px 12px 15px;
+
+  animation: fadeIn 2.5s;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+`;
+
+export const EducationText = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const EducationSchool = styled.div`
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #202124;
+`;
+
+export const EducationDescription = styled.div`
+  font-size: 14px;
+  font-size: 400;
+  line-height: 1.58;
+  color: #70757a;
+`;
+
+export const EducationBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #70757a;
+  width: 40px;
+  height: 40px;
+  border-radius: 999rem;
+  padding: 10px;
+  background-color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(60,64,67,0.08);
+    color: #4d5156;
+  }
+
+  &:active {
+    background-color: rgba(60,64,67,0.24);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
+export const EducationNotification = styled.span`
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  top: 860px;
+  min-width: 288px;
+  min-height: 48px;
+  max-width: 288px;
+  max-height: 48px;
+  background-color: #0f0f0f;
   color: #fff;
-  position: relative;
-  left: 96px;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  transform: ${(props) => (props.open ? "translateY(0px)" : "translateY(100px)")};
+  opacity: ${(props) => (props.open ? "1" : "0")};
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 3;
 `;
 
 export const EducationImage = styled.img`
-  display: ${(props) => (props.selected ? "flex" : "none")};
-  width: 200px;
-  height: 200px;
-  animation: fadeIn 6.5s;
-  position: relative;
-  left: 8px;
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+  width: 150px;
+  height: 150px;
+  animation: fadeIn 2.5s;
 `;

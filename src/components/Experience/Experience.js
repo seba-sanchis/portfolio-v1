@@ -14,9 +14,7 @@ const Experience = () => {
       <SectionTitle>Experience</SectionTitle>
       <SectionText></SectionText>
       <Statement>
-        I have been doing projects as a team and individually for more than a year, applying in each of them<br />
-        new technologies and methodologies that allow me to grow in my approach as a Frontend Developer.<br />
-        Unfortunately I don't have work experience as a developer yet.
+        I have been doing projects as a team and individually for more than a year, applying in each of them new technologies and methodologies that allow me to grow in my approach as a Frontend Developer. Unfortunately I don't have work experience as a developer yet.
       </Statement>
     </Section>
   );

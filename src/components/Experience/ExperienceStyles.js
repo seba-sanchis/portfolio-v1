@@ -7,4 +7,6 @@ export const Statement = styled.p`
   line-height: 28px;
   text-align: center;
   color: #5f6368;
+  max-width: 800px;
+  margin: 0 auto;
 `;

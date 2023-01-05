@@ -10,7 +10,8 @@ export const InputContainer = styled.div`
   border: ${(props) => props.error ? "1px solid #d93025" : "1px solid #dadce0"};
   border-radius: 4px;
   height: ${(props) => (props.area ? "168px" : "56px")};
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 8px 0;
   display: flex;
   align-items: ${(props) => (props.area ? "start" : "center")};

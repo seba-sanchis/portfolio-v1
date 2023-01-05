@@ -23,25 +23,25 @@ export const Section = styled.section`
 
 export const SectionTitle = styled.h2`
   font-weight: ${(props) => (props.main ? "600" : "400")};
-  font-size: ${(props) => (props.main ? "60px" : "40px")};
-  line-height: ${(props) => (props.main ? "68px" : "48px")};
+  font-size: ${(props) => (props.main ? "60px" : "36px")};
+  line-height: ${(props) => (props.main ? "72px" : "44px")};
   width: max-content;
   margin-bottom: 16px;
   padding: ${(props) => (props.main ? "48px 0 16px" : "0")};
   color: #202124;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    font-size: ${(props) => (props.main ? "56px" : "48px")};
-    line-height: ${(props) => (props.main ? "56px" : "48px")};
+    font-size: ${(props) => (props.main ? "48px" : "32px")};
+    line-height: ${(props) => (props.main ? "56px" : "40px")};
     margin-bottom: 12px;
     padding: ${(props) => (props.main ? "40px 0 12px" : "0")};
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     font-size: 32px;
-    line-height: 40px;
-    font-size: ${(props) => (props.main ? "28px" : "32px")};
-    line-height: ${(props) => (props.main ? "32px" : "40px")};
+    /* line-height: 40px; */
+    font-size: ${(props) => (props.main ? "36px" : "24px")};
+    line-height: ${(props) => (props.main ? "44px" : "32px")};
     margin-bottom: 8px;
     padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
   }

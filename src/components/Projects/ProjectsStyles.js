@@ -16,6 +16,7 @@ export const Img = styled.img`
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
   justify-content: center;
   column-gap: 8px;
   row-gap: 32px;
@@ -40,10 +41,6 @@ export const BlogCard = styled.div`
   &:hover ${Img} {
     transition: 0.3s transform linear;
     transform: scale(1.05);
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    width: 100%;
   }
 `;
 
