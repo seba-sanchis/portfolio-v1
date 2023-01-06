@@ -21,6 +21,9 @@ import {
   EducationBtn,
   EducationNotification,
   EducationImage,
+  EducationDetails,
+  EducationStudy,
+  EducationSummary,
 } from "./EducationStyles";
 import { education } from "../../constants/constants";
 import { IoShareSocialSharp } from "react-icons/io5";
@@ -130,6 +133,12 @@ const Education = () => {
               </EducationBtn>
             </EducationInstitution>
             <EducationImage src={item.image} key={index} />
+            <EducationDetails>
+              <EducationStudy>{item.study}</EducationStudy>
+              {item.skill?.map((item, index) => (
+                <EducationSummary index={index}>{item}</EducationSummary>
+              ))}
+            </EducationDetails>
           </EducationDisplay>
         ))}
       </EducationContainer>

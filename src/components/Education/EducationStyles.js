@@ -68,13 +68,13 @@ export const EducationSubtitle = styled.p`
 
 export const EducationDisplay = styled.div`
   display: ${(props) => (props.selected ? "flex" : "none")};
+  flex-wrap: wrap;
   border: 1px solid #dadce0;
   border-radius: 8px;
-  width: 366px;
+  /* width: 366px; */
   width: 415px;
-  height: 160px;
-  align-items: center;
-  justify-content: space-between;
+  /* height: 160px; */
+  height: 100%;
   margin-left: 36px;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
@@ -88,22 +88,23 @@ export const EducationDisplay = styled.div`
 
 export const EducationInstitution = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 150px);
   font-size: 30px;
   font-weight: 400;
   padding: 12px 15px 12px 15px;
 
   animation: fadeIn 2.5s;
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  100% {
-    opacity: 1;
-  }
-}
 `;
 
 export const EducationText = styled.div`
@@ -139,12 +140,12 @@ export const EducationBtn = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(60,64,67,0.08);
+    background-color: rgba(60, 64, 67, 0.08);
     color: #4d5156;
   }
 
   &:active {
-    background-color: rgba(60,64,67,0.24);
+    background-color: rgba(60, 64, 67, 0.24);
   }
 
   svg {
@@ -171,14 +172,61 @@ export const EducationNotification = styled.span`
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 400;
-  transform: ${(props) => (props.open ? "translateY(0px)" : "translateY(100px)")};
+  transform: ${(props) =>
+    props.open ? "translateY(0px)" : "translateY(100px)"};
   opacity: ${(props) => (props.open ? "1" : "0")};
   transition: transform 0.3s, opacity 0.3s;
   z-index: 3;
 `;
 
 export const EducationImage = styled.img`
-  width: 150px;
-  height: 150px;
+  display: flex;
+  width: 140px;
+  height: 140px;
   animation: fadeIn 2.5s;
+  margin: 5px;
+`;
+
+export const EducationDetails = styled.ul`
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dadce0;
+  padding: 13px 15px 16px 15px;
+  width: 100%;
+  height: 100%;
+`;
+
+export const EducationStudy = styled.span`
+  color: #202124;
+  font-size: 14px;
+  line-height: 1.58;
+  font-weight: bolder;
+
+  animation: fadeIn 2.5s;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+`;
+
+export const EducationSummary = styled.li`
+  font-size: 14px;
+  color: #4d5156;
+  line-height: 1.58;
+
+  animation: fadeIn 2.5s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
