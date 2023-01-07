@@ -95,7 +95,7 @@ export const EducationInstitution = styled.div`
   font-weight: 400;
   padding: 12px 15px 12px 15px;
 
-  animation: fadeIn 2.5s;
+  animation: fadeIn 1.5s;
 
   @keyframes fadeIn {
     0% {
@@ -183,7 +183,7 @@ export const EducationImage = styled.img`
   display: flex;
   width: 140px;
   height: 140px;
-  animation: fadeIn 2.5s;
+  animation: fadeIn 1.5s;
   margin: 5px;
 `;
 
@@ -202,16 +202,16 @@ export const EducationStudy = styled.span`
   line-height: 1.58;
   font-weight: bolder;
 
-  animation: fadeIn 2.5s;
+  animation: fadeIn 1.5s;
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  100% {
-    opacity: 1;
-  }
-}
 `;
 
 export const EducationSummary = styled.li`
@@ -219,7 +219,7 @@ export const EducationSummary = styled.li`
   color: #4d5156;
   line-height: 1.58;
 
-  animation: fadeIn 2.5s;
+  animation: fadeIn 1.5s;
 
   @keyframes fadeIn {
     0% {

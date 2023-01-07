@@ -15,10 +15,14 @@ export const ListItem = styled.div`
   display: flex;
   align-items: center;
   padding-left: 6px;
-  border-top: ${(props) => (props.noborder ? null : "1px solid #dadce0")};
+  border-top: ${(props) => (props.rowLaptop ? null : "1px solid #dadce0")};
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    border-top: ${(props) => (props.rowTablet ? null : "1px solid #dadce0")};
+  }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    border-top: ${(props) => (props.border ? "1px solid #dadce0" : null)};
+    border-top: ${(props) => (props.rowMobile ? null : "1px solid #dadce0")};
   }
 `;
 
@@ -44,7 +48,7 @@ export const ToggleButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.1s ease-out;
+  transition: transform 0.3s ease-out;
   transform: ${(props) => (props.toggle ? "rotate(180deg)" : null)};
 `;
 
@@ -54,7 +58,6 @@ export const ListContainer = styled.div`
   width: 100%;
   border-top: 1px solid #dadce0;
   cursor: pointer;
-  border-bottom: ${(props) => (props.toggle ? "2px solid #174ea6" : null)};
 
   &:hover ${ListTitle} {
     color: #174ea6;
@@ -65,14 +68,24 @@ export const ListContainer = styled.div`
   }
 `;
 
+export const ListExpand = styled.div`
+  width: 100%;
+  max-height: ${(props) => (props.toggle ? "413px" : "0")};
+  transition: ${(props) =>
+    props.toggle ? "max-height .3s ease-in" : "max-height .3s ease-out"};
+  overflow: hidden;
+`;
+
 export const ListContent = styled.div`
   display: flex;
-  border-top: 1px solid #dadce0;
-  width: 100%;
-  padding: 24px 2px;
+  padding: 0 2px 24px 2px;
   display: grid;
   grid-template-columns: repeat(4, minmax(5px, 1fr));
   grid-column-gap: 48px;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    grid-template-columns: repeat(3, minmax(5px, 1fr));
+  }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     grid-template-columns: repeat(2, minmax(5px, 1fr));
@@ -92,7 +105,6 @@ export const ListParagraph = styled.p`
   margin-top: auto;
 `;
 
-// Social Icons
 export const ListIcon = styled.div`
   color: #3c4043;
   display: flex;

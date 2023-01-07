@@ -108,7 +108,7 @@ const Education = () => {
                 </EducationTitle>
                 <EducationSubtitle>
                   {item.school}
-                  {` (${item.startDate} - ${item.endDate})`}
+                  {`(${item.startDate} - ${item.endDate})`}
                 </EducationSubtitle>
               </EducationInfo>
             </EducationTab>
@@ -136,7 +136,7 @@ const Education = () => {
             <EducationDetails>
               <EducationStudy>{item.study}</EducationStudy>
               {item.skill?.map((item, index) => (
-                <EducationSummary index={index}>{item}</EducationSummary>
+                <EducationSummary index={index} key={index}>{item}</EducationSummary>
               ))}
             </EducationDetails>
           </EducationDisplay>

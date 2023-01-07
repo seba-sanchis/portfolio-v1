@@ -77,7 +77,7 @@ export const LineSelected = styled.div`
 `;
 
 export const SocialIcons = styled.div`
-  grid-area: 1 / 7 / 1 / 9;
+  grid-area: 1 / 8 / 1 / 9;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -144,7 +144,6 @@ export const Sidenav = styled.div`
     props.active
       ? "transform 0.35s cubic-bezier(0.24, 1, 0.32, 1)"
       : "transform .3s ease,background .3s ease,box-shadow .3s ease"};
-  /* visibility: ${(props) => (props.active ? "visible" : "hidden")}; */
   z-index: 6;
 `;
 
@@ -187,7 +186,7 @@ export const NavSections = styled.ul`
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.25px;
-      transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+      transition: background-color .3s, box-shadow .3s, color .3s;
 
       &:hover {
         background-color: #f8f9fa;
@@ -206,8 +205,7 @@ export const Backdrop = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  visibility: ${(props) => (props.active ? "visible" : "hidden")};
   opacity: ${(props) => (props.active ? "1" : "0")};
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 5;
 `;

@@ -1,3 +1,26 @@
+import { DiJavascript1, DiCss3, DiHtml5, DiSass } from "react-icons/di";
+import {
+  SiAngular,
+  SiAmazonaws,
+  SiGooglecloud,
+  SiNextdotjs,
+  SiReact,
+  SiRedux,
+  SiStyledcomponents,
+  SiExpress,
+  SiJest,
+  SiMongodb,
+  SiMysql,
+  SiNodedotjs,
+  SiSequelize,
+  SiAdobexd,
+  SiFigma,
+  SiInvision,
+  SiSketch,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+
 export const about = { image: "/images/about_sebastian-sanchis.jpg" };
 
 export const projects = [
@@ -33,8 +56,47 @@ export const projects = [
   },
 ];
 
+export const stack = [
+  { title: "Frontend" },
+  { title: "Backend" },
+  { title: "UI/UX" },
+];
+
+export const skills = [
+  { stack: "Frontend", icon: SiAngular, technology: "Angular" },
+  { stack: "Frontend", icon: DiCss3, technology: "CSS" },
+  { stack: "Frontend", icon: DiHtml5, technology: "HTML" },
+  { stack: "Frontend", icon: DiJavascript1, technology: "JavaScript" },
+  { stack: "Frontend", icon: SiJest, technology: "Jest" },
+  { stack: "Frontend", icon: SiNextdotjs, technology: "Next" },
+  { stack: "Frontend", icon: SiReact, technology: "React" },
+  { stack: "Frontend", icon: SiRedux, technology: "Redux" },
+  { stack: "Frontend", icon: DiSass, technology: "Sass" },
+  {
+    stack: "Frontend",
+    icon: SiStyledcomponents,
+    technology: "styled-components",
+  },
+  { stack: "Frontend", icon: SiTailwindcss, technology: "Tailwind CSS" },
+  { stack: "Frontend", icon: SiTypescript, technology: "Typescript" },
+  { stack: "Backend", icon: SiAmazonaws, technology: "AWS" },
+  { stack: "Backend", icon: SiExpress, technology: "Express" },
+  { stack: "Backend", icon: SiGooglecloud, technology: "GCP" },
+  { stack: "Backend", icon: DiJavascript1, technology: "JavaScript" },
+  { stack: "Backend", icon: SiJest, technology: "Jest" },
+  { stack: "Backend", icon: SiMongodb, technology: "MongoDB" },
+  { stack: "Backend", icon: SiMysql, technology: "MySQL" },
+  { stack: "Backend", icon: SiNodedotjs, technology: "Node" },
+  { stack: "Backend", icon: SiSequelize, technology: "Sequelize" },
+  { stack: "Backend", icon: SiTypescript, technology: "Typescript" },
+  { stack: "UI/UX", icon: SiAdobexd, technology: "Adobe Xd" },
+  { stack: "UI/UX", icon: SiFigma, technology: "Figma" },
+  { stack: "UI/UX", icon: SiInvision, technology: "Invision" },
+  { stack: "UI/UX", icon: SiSketch, technology: "Sketch" },
+];
+
 export const experience = [
-  { year: 2022, title: "Frontend Developer", text: "ConoSurIT" },
+  { year: 2022, position: "Frontend Developer", company: "ConoSurIT" },
 ];
 
 export const education = [
