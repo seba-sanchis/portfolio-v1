@@ -137,13 +137,11 @@ export const Sidenav = styled.div`
   right: 56px;
   position: fixed;
   margin-right: 56px;
+  visibility: ${(props) => (props.active ? "visible" : "hidden")};
   transform: ${(props) =>
     props.active ? "translate3d(0,0,0)" : "translate3d(-100%,0,0)"};
   box-shadow: ${(props) => (props.active ? "none" : "0 0 0 0 transparent")};
-  transition: ${(props) =>
-    props.active
-      ? "transform 0.35s cubic-bezier(0.24, 1, 0.32, 1)"
-      : "transform .3s ease,background .3s ease,box-shadow .3s ease"};
+  transition: ${(props) => props.active ? "all 0.3s cubic-bezier(0.24, 1, 0.32, 1)" : "all .3s ease,background .3s ease,box-shadow .3s ease"};
   z-index: 6;
 `;
 
@@ -205,7 +203,8 @@ export const Backdrop = styled.div`
   position: fixed;
   right: 0;
   top: 0;
+  visibility: ${(props) => (props.active ? "visible" : "hidden")};
   opacity: ${(props) => (props.active ? "1" : "0")};
-  transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 5;
 `;
