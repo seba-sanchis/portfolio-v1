@@ -7,41 +7,42 @@ export const Section = styled.section`
   margin: 48px auto;
   position: relative;
   overflow: hidden;
-  grid-template-columns: 1fr 1fr;
   background-color: #fff;
   align-items: ${(props) => (props.center ? "center" : null)};
+  grid-template-columns: 1fr 1fr;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: ${(props) => (props.main ? null : "100px 48px 0")};
+    grid-template-columns: none;
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     padding: ${(props) => (props.main ? null : "85px 16px 0")};
+    grid-template-columns: none;
     width: calc(100vw - 32px);
   }
 `;
 
 export const SectionTitle = styled.h2`
   font-weight: ${(props) => (props.main ? "600" : "400")};
-  font-size: ${(props) => (props.main ? "60px" : "36px")};
-  line-height: ${(props) => (props.main ? "72px" : "44px")};
+  font-size: 36px;
+  line-height: 44px;
   width: max-content;
   margin-bottom: 16px;
   padding: ${(props) => (props.main ? "48px 0 16px" : "0")};
   color: #202124;
+  width: 100%;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    font-size: ${(props) => (props.main ? "48px" : "32px")};
-    line-height: ${(props) => (props.main ? "56px" : "40px")};
+    font-size: 36px;
+    line-height: 44px;
     margin-bottom: 12px;
     padding: ${(props) => (props.main ? "40px 0 12px" : "0")};
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    font-size: 32px;
-    /* line-height: 40px; */
-    font-size: ${(props) => (props.main ? "36px" : "24px")};
-    line-height: ${(props) => (props.main ? "44px" : "32px")};
+    font-size: 24px;
+    line-height: 32px;
     margin-bottom: 8px;
     padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
   }

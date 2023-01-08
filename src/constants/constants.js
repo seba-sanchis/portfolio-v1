@@ -140,7 +140,7 @@ export const education = [
     image: "/images/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
-      "OOP with JavaScript and TypeScript",
+      "OOP with JavaScript and TypeScript.",
       "Pillars of OOP: Encapsulation, Inheritance, Polymorphism, Abstraction.",
       "Interfaces",
     ],

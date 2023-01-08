@@ -13,6 +13,7 @@ import {
   EducationInfo,
   EducationTitle,
   EducationSubtitle,
+  EducationExpand,
   EducationDisplay,
   EducationInstitution,
   EducationText,
@@ -93,25 +94,49 @@ const Education = () => {
       <EducationContainer>
         <EducationTabList role="tablist">
           {education.map((item, index) => (
-            <EducationTab
-              index={index}
-              id={`education__item-${index}`}
-              role="tab"
-              aria-selected="false"
-              onClick={handleSelect}
-              key={index}
-            >
-              <EducationTrack selected={index === selected}></EducationTrack>
-              <EducationInfo>
-                <EducationTitle selected={index === selected}>
-                  {item.study}
-                </EducationTitle>
-                <EducationSubtitle>
-                  {item.school}
-                  {`(${item.startDate} - ${item.endDate})`}
-                </EducationSubtitle>
-              </EducationInfo>
-            </EducationTab>
+            <>
+              <EducationTab
+                index={index}
+                onClick={handleSelect}
+                id={`education__item-${index}`}
+                role="tab"
+                aria-selected="false"
+                key={index}
+              >
+                <EducationTrack selected={index === selected}></EducationTrack>
+                <EducationInfo>
+                  <EducationTitle selected={index === selected}>
+                    {item.study}
+                  </EducationTitle>
+                  <EducationSubtitle>
+                    {item.school}
+                    {` (${item.startDate} - ${item.endDate})`}
+                  </EducationSubtitle>
+                </EducationInfo>
+              </EducationTab>
+              <EducationExpand selected={index === selected}>
+                <EducationInstitution>
+                  <EducationText>
+                    <EducationSchool>{item.school}</EducationSchool>
+                    <EducationDescription>
+                      {item.description}
+                    </EducationDescription>
+                  </EducationText>
+                  <EducationBtn data-value={item.link} onClick={handleCopy}>
+                    <IoShareSocialSharp />
+                  </EducationBtn>
+                </EducationInstitution>
+                <EducationImage src={item.image} key={index} />
+                <EducationDetails>
+                  <EducationStudy>{item.study}</EducationStudy>
+                  {item.skill?.map((item, index) => (
+                    <EducationSummary index={index} key={index}>
+                      {item}
+                    </EducationSummary>
+                  ))}
+                </EducationDetails>
+              </EducationExpand>
+            </>
           ))}
         </EducationTabList>
         {education.map((item, index) => (
@@ -136,7 +161,9 @@ const Education = () => {
             <EducationDetails>
               <EducationStudy>{item.study}</EducationStudy>
               {item.skill?.map((item, index) => (
-                <EducationSummary index={index} key={index}>{item}</EducationSummary>
+                <EducationSummary index={index} key={index}>
+                  {item}
+                </EducationSummary>
               ))}
             </EducationDetails>
           </EducationDisplay>

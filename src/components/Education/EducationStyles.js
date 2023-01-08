@@ -66,22 +66,34 @@ export const EducationSubtitle = styled.p`
   line-height: 24px;
 `;
 
+export const EducationExpand = styled.div`
+  display: none;
+  flex-wrap: wrap;
+  width: 415px;
+  padding-left: 24px;
+  margin-left: 10px;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    display: ${(props) => (props.selected ? "flex" : "none")};
+    max-width: 415px;
+    width: 100%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    max-width: 315px;
+  }
+`;
+
 export const EducationDisplay = styled.div`
   display: ${(props) => (props.selected ? "flex" : "none")};
   flex-wrap: wrap;
   border: 1px solid #dadce0;
   border-radius: 8px;
-  /* width: 366px; */
   width: 415px;
-  /* height: 160px; */
   height: 100%;
   margin-left: 36px;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    display: none;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
     display: none;
   }
 `;
@@ -105,6 +117,11 @@ export const EducationInstitution = styled.div`
       opacity: 1;
     }
   }
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    padding: 12px 15px 12px 0;
+    width: calc(100% - 100px);
+  }
 `;
 
 export const EducationText = styled.div`
@@ -118,12 +135,18 @@ export const EducationSchool = styled.div`
   font-weight: 400;
   line-height: 1.2;
   color: #202124;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+  }
 `;
 
 export const EducationDescription = styled.div`
   font-size: 14px;
-  font-size: 400;
-  line-height: 1.58;
+  font-weight: 400;
+  line-height: 24px;
   color: #70757a;
 `;
 
@@ -185,6 +208,11 @@ export const EducationImage = styled.img`
   height: 140px;
   animation: fadeIn 1.5s;
   margin: 5px;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    width: 90px;
+    height: 90px;
+  }
 `;
 
 export const EducationDetails = styled.ul`
@@ -193,7 +221,10 @@ export const EducationDetails = styled.ul`
   border-top: 1px solid #dadce0;
   padding: 13px 15px 16px 15px;
   width: 100%;
-  height: 100%;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    padding: 13px 15px 16px 0;
+  }
 `;
 
 export const EducationStudy = styled.span`
