@@ -21,7 +21,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-export const about = { image: "/images/about_sebastian-sanchis.jpg" };
+export const about = { me: "Sebastian Sanchis", logo: "/svg/logo.svg", photo: "/images/about_sebastian-sanchis.jpg" };
 
 export const projects = [
   {

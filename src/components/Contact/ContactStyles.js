@@ -41,7 +41,7 @@ export const Input = styled.input`
 
 export const Placeholder = styled.div`
   background: #fff;
-  margin-top: ${(props) => (props.area ? "15px" : "")};
+  margin-top: ${(props) => (props.area ? "15px" : null)};
   margin-left: 8px;
   color: ${(props) => props.error ? "#d93025" : props.blur ? "#1967d2" : "#5f6368"};
   font-size: 16px;
@@ -49,7 +49,7 @@ export const Placeholder = styled.div`
   padding: 0 8px;
   position: absolute;
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: ${(props) => (props.focus ? "scale(0.75) translateY(-35px)" : "")};
+  transform: ${(props) => (props.focus ? "scale(0.75) translateY(-35px)" : null)};
   transform-origin: bottom left;
   z-index: ${(props) => (props.focus ? "3" : "1")};
 `;

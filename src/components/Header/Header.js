@@ -11,29 +11,75 @@ import {
   Container,
   Menu,
   MenuIcon,
+  Logo,
+  Span,
+  Nav,
   Sections,
+  Section,
+  SectionSelected,
   SocialIcons,
   Icon,
   Sidenav,
   NavHeader,
   NavSections,
+  NavSection,
   Backdrop,
 } from "./HeaderStyles";
 
-const Header = () => {
+import { about } from "../../constants/constants";
+
+const Header = ({ sectionRefs, headerRef }) => {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [scrollTop, setScrollTop] = useState(false);
   const [toggleSidenav, setToggleSidenav] = useState(false);
 
+  const [visibleSection, setVisibleSection] = useState();
+
+  const getDimensions = (ele) => {
+    const { height } = ele.getBoundingClientRect();
+    const offsetTop = ele.offsetTop;
+    const offsetBottom = offsetTop + height;
+    return {
+      height,
+      offsetTop,
+      offsetBottom,
+    };
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const { height: headerHeight } = getDimensions(headerRef.current);
+      const scrollPosition = window.scrollY + headerHeight;
+      const selected = sectionRefs.find(({ section, ref }) => {
+        const ele = ref.current;
+        if (ele) {
+          const { offsetBottom, offsetTop } = getDimensions(ele);
+          return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+        }
+      });
+
+      if (selected && selected.section !== visibleSection) {
+        setVisibleSection(selected.section);
+      }
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [visibleSection]);
+
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
 
-    const updateScrollDirection = () => {
+    const updateScrollDirection = (e) => {
       const scrollY = window.pageYOffset;
       const direction = scrollY > lastScrollY ? "down" : "up";
+
       if (
         direction !== scrollDirection &&
-        (scrollY - lastScrollY > 5 || scrollY - lastScrollY < -5)
+        (scrollY - lastScrollY > 5 || scrollY - lastScrollY < -5) &&
+        document.body.style.overflow !== "hidden"
       ) {
         setScrollDirection(direction);
       }
@@ -65,39 +111,41 @@ const Header = () => {
       scrollDown={scrollDirection === "down"}
       scrollUp={scrollDirection === "up"}
       scrollTop={scrollTop}
+      ref={headerRef}
     >
       <Menu onClick={handleSidenav}>
         <MenuIcon>
           <AiOutlineMenu size="3rem" />
         </MenuIcon>
       </Menu>
-      <Sections>
-        <li>
-          <Link href={"#top"}>Home</Link>
-        </li>
-        <li>
-          <Link href="#about">About</Link>
-        </li>
-        <li>
-          <Link href="#projects">Projects</Link>
-        </li>
-        <li>
-          <Link href="#skills">Skills</Link>
-        </li>
-        <li>
-          <Link href="#experience">Experience</Link>
-        </li>
-        <li>
-          <Link href="#education">Education</Link>
-        </li>
-        <li>
-          <Link href="#contact">Contact</Link>
-        </li>
-      </Sections>
-      {/* <LineSelected style={false ? {display: "block", left: "0px", right: "684.25px"} : {display: "none", left: "0px", right: "684.25px"}}></LineSelected> */}
-
+      <Link href="/">
+        <Span>
+          <Logo src={about.logo} />
+          {about.me}
+        </Span>
+      </Link>
+      <Nav>
+        <Sections>
+          {sectionRefs.map((item, index) => (
+            <Section key={index} selected={item.section === visibleSection}>
+              <Link href={item.link}>{item.section}</Link>
+            </Section>
+          ))}
+        </Sections>
+        <SectionSelected
+          scrollTop={scrollTop}
+          scrollDown={scrollDirection === "down"}
+          atHome={visibleSection === "Home"}
+          atAbout={visibleSection === "About"}
+          atProjects={visibleSection === "Projects"}
+          atSkills={visibleSection === "Skills"}
+          atExperience={visibleSection === "Experience"}
+          atEducation={visibleSection === "Education"}
+          atContact={visibleSection === "Contact"}
+        ></SectionSelected>
+      </Nav>
       <SocialIcons>
-        <Icon href="https://github.com/seba-sanchis" target="_blank">
+        <Icon nomargin href="https://github.com/seba-sanchis" target="_blank">
           <AiFillGithub size="3rem" />
         </Icon>
         <Icon
@@ -115,29 +163,24 @@ const Header = () => {
       </SocialIcons>
 
       <Sidenav active={toggleSidenav} id="sidenav">
-        <NavHeader></NavHeader>
+        <NavHeader>
+          <Link href="/">
+            <Span sidenav>
+              <Logo src={about.logo} />
+              {about.me}
+            </Span>
+          </Link>
+        </NavHeader>
         <NavSections>
-          <li onClick={handleSidenav}>
-            <Link href="#">Home</Link>
-          </li>
-          <li onClick={handleSidenav}>
-            <Link href="#about">About</Link>
-          </li>
-          <li onClick={handleSidenav}>
-            <Link href="#projects">Projects</Link>
-          </li>
-          <li onClick={handleSidenav}>
-            <Link href="#skills">Skills</Link>
-          </li>
-          <li onClick={handleSidenav}>
-            <Link href="#experience">Experience</Link>
-          </li>
-          <li onClick={handleSidenav}>
-            <Link href="#education">Education</Link>
-          </li>
-          <li onClick={handleSidenav}>
-            <Link href="#contact">Contact</Link>
-          </li>
+          {sectionRefs.map((item, index) => (
+            <NavSection
+              onClick={handleSidenav}
+              key={index}
+              selected={item.section === visibleSection}
+            >
+              <Link href={item.link}>{item.section}</Link>
+            </NavSection>
+          ))}
         </NavSections>
       </Sidenav>
       <Backdrop active={toggleSidenav} onClick={handleSidenav}></Backdrop>

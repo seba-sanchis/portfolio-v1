@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import { Section, SectionTitle, SectionText, Button } from '../../styles/GlobalComponents';
 import { Form, InputContainer, Input, Placeholder, TextArea, SuccessContainer, Image, SuccessMessage, ErrorContainer, Error } from './ContactStyles';
 
-const Contact = () => {
+const Contact = ({contactRef}) => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formErrors, setFormErrors] = useState({});
@@ -64,7 +64,7 @@ const Contact = () => {
   }
 
   return (
-    <Section id="contact">
+    <Section id="contact" ref={contactRef}>
       <SectionTitle>Contact me</SectionTitle>
       <SectionText>I will be glad to answer as soon as possible.</SectionText>
       {Object.keys(formErrors).length !== 0 || !formSubmitted ?

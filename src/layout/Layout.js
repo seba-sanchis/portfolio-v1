@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useRef } from "react";
 
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
-import { Container, Main } from './LayoutStyles'
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import { Container, Main } from "./LayoutStyles";
 
-export const Layout = ({children}) => {
+export const Layout = ({ children, sectionRefs, headerRef }) => {
+
   return (
     <Container>
-     <Header/>
-     <Main children={children} /> 
-     <Footer/>
+      <Header sectionRefs={sectionRefs} headerRef={headerRef} />
+      <Main children={children} />
+      <Footer />
     </Container>
-  )
-}
+  );
+};

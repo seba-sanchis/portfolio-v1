@@ -2,19 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 8px;
   background-color: #fff;
   width: 100%;
   height: 64px;
   padding: 0 20px;
   align-items: center;
+  justify-content: center;
   position: fixed;
-  transform: ${(props) =>
-    props.scrollDown ? "translate3d(0,-140px,0)" : "none"};
+  /* transform: ${(props) =>
+    props.scrollDown ? "translate3d(0,-140px,0)" : "none"}; */
   box-shadow: ${(props) =>
-    props.scrollUp && !props.scrollTop
+    (props.scrollUp || props.scrollDown) && !props.scrollTop
       ? "0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%)"
       : "none"};
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
@@ -36,48 +36,121 @@ export const Menu = styled.div`
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     display: flex;
-    grid-area: 1 / 1 / 1 / 1;
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    display: flex;
-    grid-area: 1 / 1 / 1 / 1;
   }
 `;
 
-export const Sections = styled.ul`
-  grid-area: 1 / 5 / 1 / 6;
+export const Span = styled.span`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  grid-area: 1 / 1 / 1 / 1;
+  color: #3c4043;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-left: ${(props) => (props.sidenav ? "18px" : null)};
 
-  a {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #5f6368;
-    padding: 0 12px;
-    &:hover {
-      color: #202124;
-      cursor: pointer;
-    }
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    display: ${(props) => (props.sidenav ? null : "none")};
   }
+`;
 
+export const Logo = styled.img`
+  width: 30px;
+  height: 30px;
+`;
+
+export const Nav = styled.nav`
+  grid-area: 1 / 2 / 1 / 2;
+  display: inline-block;
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
   @media ${(props) => props.theme.breakpoints.tablet} {
     display: none;
   }
 `;
 
-export const LineSelected = styled.div`
+export const Sections = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+`;
+
+export const Section = styled.li`
+  padding: 0 12px;
+  height: 100%;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: ${(props) => (props.selected ? "#202124" : "#5f6368")};
+    height: 100%;
+    padding: 10px 0;
+
+    &:hover {
+      color: #202124;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: #3367d6;
+    }
+  }
+`;
+
+export const SectionSelected = styled.div`
+  display: ${(props) => (props.scrollTop ? "none" : "block")};
+  left: ${(props) =>
+    props.atHome
+      ? "0"
+      : props.atAbout
+      ? "63.84px"
+      : props.atProjects
+      ? "127.57px"
+      : props.atSkills
+      ? "204.01px"
+      : props.atExperience
+      ? "260.73px"
+      : props.atEducation
+      ? "357px"
+      : props.atContact
+      ? "446.42px"
+      : null};
+  right: ${(props) =>
+    props.atHome
+      ? "457.24px"
+      : props.atAbout
+      ? "393.51px"
+      : props.atProjects
+      ? "317.07px"
+      : props.atSkills
+      ? "260.35px"
+      : props.atExperience
+      ? "164.08px"
+      : props.atEducation
+      ? "74.66px"
+      : props.atContact
+      ? "0"
+      : null};
+  background-color: ${(props) => (props.atHome !== undefined ? "#4285f4" : null)};
+  transition: ${(props) =>
+    props.scrollDown
+      ? "left .35s cubic-bezier(.35,0,.25,1),right .18s cubic-bezier(.35,0,.25,1)"
+      : "left .18s cubic-bezier(.35,0,.25,1),right .35s cubic-bezier(.35,0,.25,1);"};
   bottom: 0;
   height: 2px;
   position: absolute;
   transform: translateZ(0);
   will-change: right, left;
-  background-color: #4285f4;
 `;
 
 export const SocialIcons = styled.div`
-  grid-area: 1 / 8 / 1 / 9;
+  grid-area: 1 / 3 / 1 / 3;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -114,11 +187,15 @@ export const Icon = styled.a`
   align-items: center;
   width: ${(props) => (props.small ? "20px" : "24px")};
   height: ${(props) => (props.small ? "20px" : "24px")};
-  margin-left: 24px;
+  margin-left: ${(props) => (props.nomargin ? null : "16px")};
 
   &:hover {
     color: #202124;
     cursor: pointer;
+  }
+
+  &:active {
+    color: #3367d6;
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
@@ -141,7 +218,10 @@ export const Sidenav = styled.div`
   transform: ${(props) =>
     props.active ? "translate3d(0,0,0)" : "translate3d(-100%,0,0)"};
   box-shadow: ${(props) => (props.active ? "none" : "0 0 0 0 transparent")};
-  transition: ${(props) => props.active ? "all 0.3s cubic-bezier(0.24, 1, 0.32, 1)" : "all .3s ease,background .3s ease,box-shadow .3s ease"};
+  transition: ${(props) =>
+    props.active
+      ? "all 0.3s cubic-bezier(0.24, 1, 0.32, 1)"
+      : "all .3s ease,background .3s ease,box-shadow .3s ease"};
   z-index: 6;
 `;
 
@@ -166,30 +246,31 @@ export const NavSections = styled.ul`
   display: block;
   padding-bottom: 23px;
   padding-top: 30px;
+`;
 
-  & li {
+export const NavSection = styled.li`
+  display: flex;
+  height: 52px;
+  width: 100%;
+  background-color: ${(props) => (props.selected ? "#f8f9fa" : null)};
+
+  & a {
     display: flex;
-    height: 52px;
-    width: 100%;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 12px;
+    color: ${(props) => (props.selected ? "#202124" : "#5f6368")};
+    height: 48px;
+    width: calc(100% - 8px);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 
-    & a {
-      display: flex;
-      align-items: center;
-      padding-left: 18px;
-      padding-right: 12px;
-      color: #5f6368;
-      height: 48px;
-      width: calc(100% - 8px);
-      line-height: 1.5;
-      font-size: 16px;
-      font-weight: 500;
-      letter-spacing: 0.25px;
-      transition: background-color .3s, box-shadow .3s, color .3s;
-
-      &:hover {
-        background-color: #f8f9fa;
-        color: #202124;
-      }
+    &:hover {
+      background-color: #f8f9fa;
+      color: #202124;
     }
   }
 `;
@@ -205,6 +286,6 @@ export const Backdrop = styled.div`
   top: 0;
   visibility: ${(props) => (props.active ? "visible" : "hidden")};
   opacity: ${(props) => (props.active ? "1" : "0")};
-  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 5;
 `;

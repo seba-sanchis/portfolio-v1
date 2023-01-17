@@ -18,8 +18,8 @@ import { HiChevronRight } from "react-icons/hi";
 import { Section, SectionTitle, SectionText } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
 
-const Projects = () => (
-  <Section id="projects">
+const Projects = ({projectsRef}) => (
+  <Section id="projects" ref={projectsRef}>
     <SectionTitle>Projects</SectionTitle>
     <SectionText>
       These are the projects in which I was acquiring and implementing new

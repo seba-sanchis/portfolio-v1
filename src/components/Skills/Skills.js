@@ -21,7 +21,7 @@ import {
   ListIcon,
 } from "./SkillsStyles";
 
-const Skills = () => {
+const Skills = ({skillsRef}) => {
   const [toggleList, setToggleList] = useState([]);
 
   const handleClick = (index) => {
@@ -33,7 +33,7 @@ const Skills = () => {
   };
 
   return (
-    <Section id="skills">
+    <Section id="skills" ref={skillsRef}>
       <SectionTitle>Skills</SectionTitle>
       <SectionText>
         These are the skills that I have been learning since last year by taking

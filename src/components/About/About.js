@@ -4,9 +4,10 @@ import { Container, LeftSection, Portrait } from './AboutStyles';
 import { Section, SectionTitle, SectionText } from '../../styles/GlobalComponents';
 import { about } from '../../constants/constants';
 
-const About = () => {
+const About = ({aboutRef}) => {
+  
   return (
-    <Section id="about" center>
+    <Section id="about" ref={aboutRef} center>
       <Container>
         <LeftSection>
           <SectionTitle>About me</SectionTitle>
@@ -15,7 +16,7 @@ const About = () => {
             I currently live in San Isidro, Buenos Aires and I am looking for a personal and professional challenge by undertaking dynamic and innovative projects.
           </SectionText>
         </LeftSection>
-        <Portrait src={about.image} />
+        <Portrait src={about.photo} />
       </Container>
     </Section>
   );

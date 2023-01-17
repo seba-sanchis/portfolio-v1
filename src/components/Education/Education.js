@@ -29,7 +29,7 @@ import {
 import { education } from "../../constants/constants";
 import { IoShareSocialSharp } from "react-icons/io5";
 
-const Education = () => {
+const Education = ({educationRef}) => {
   const [seconds, setSeconds] = useState(0);
   const [seconds2, setSeconds2] = useState(0);
   const [selected, setSelected] = useState(0);
@@ -86,7 +86,7 @@ const Education = () => {
   };
 
   return (
-    <Section id="education">
+    <Section id="education" ref={educationRef}>
       <SectionTitle>Education</SectionTitle>
       <SectionText>
         These are the courses and workshops in which I trained.
@@ -94,14 +94,14 @@ const Education = () => {
       <EducationContainer>
         <EducationTabList role="tablist">
           {education.map((item, index) => (
-            <>
+            <React.Fragment key={index}>
               <EducationTab
                 index={index}
                 onClick={handleSelect}
                 id={`education__item-${index}`}
                 role="tab"
                 aria-selected="false"
-                key={index}
+                key={`education__tab-${index}`}
               >
                 <EducationTrack selected={index === selected}></EducationTrack>
                 <EducationInfo>
@@ -114,7 +114,7 @@ const Education = () => {
                   </EducationSubtitle>
                 </EducationInfo>
               </EducationTab>
-              <EducationExpand selected={index === selected}>
+              <EducationExpand selected={index === selected} key={index}>
                 <EducationInstitution>
                   <EducationText>
                     <EducationSchool>{item.school}</EducationSchool>
@@ -136,7 +136,7 @@ const Education = () => {
                   ))}
                 </EducationDetails>
               </EducationExpand>
-            </>
+            </React.Fragment>
           ))}
         </EducationTabList>
         {education.map((item, index) => (

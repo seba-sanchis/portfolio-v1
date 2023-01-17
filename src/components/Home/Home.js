@@ -3,8 +3,8 @@ import React from 'react';
 import { Section, SectionText, SectionTitle, Button } from '../../styles/GlobalComponents';
 import { LeftSection } from './HomeStyles';
 
-const Home = (props) => (
-  <Section id="/" row nopadding>
+const Home = ({homeRef}) => (
+  <Section id="home" ref={homeRef} row>
     <LeftSection>
       <SectionTitle main center>
         Welcome to <br />

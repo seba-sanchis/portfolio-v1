@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Section = styled.section`
   display: ${(props) => (props.grid ? "grid" : "flex")};
   flex-direction: column;
-  padding: ${(props) => (props.main ? null : "115px 48px 27px")};
-  margin: 48px auto;
+  padding: ${(props) => (props.main ? null : props.nopadding ? "115px 0 60px" : "115px 48px 60px")};
+  margin: 80px auto;
   position: relative;
   overflow: hidden;
   background-color: #fff;
@@ -12,12 +12,12 @@ export const Section = styled.section`
   grid-template-columns: 1fr 1fr;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    padding: ${(props) => (props.main ? null : "100px 48px 0")};
+    padding: ${(props) => (props.main ? null : props.nopadding ? "100px 0 0" : "100px 48px 0")};
     grid-template-columns: none;
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: ${(props) => (props.main ? null : "85px 16px 0")};
+    padding: ${(props) => (props.main ? null : props.nopadding ? "85px 0 0" : "85px 16px 0")};
     grid-template-columns: none;
     width: calc(100vw - 32px);
   }
