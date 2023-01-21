@@ -41,7 +41,7 @@ export const projects = [
     image: "/images/project_social-media.png",
     tags: ["MongoDB", "Express", "React", "Redux", "Node", "Sass"],
     source: "https://github.com/seba-sanchis/social-media",
-    visit: "url",
+    visit: "https://social-media.sebastiansanchis.com/",
     id: 1,
   },
   {
