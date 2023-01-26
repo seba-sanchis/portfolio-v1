@@ -46,7 +46,7 @@ const Projects = ({projectsRef}) => (
             <UtilityList>
               <ExternalButton
                 href={visit}
-                disabled={visit === "/"}
+                disabled={visit === null}
                 target="_blank"
               >
                 View

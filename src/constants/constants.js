@@ -31,13 +31,13 @@ export const projects = [
     image: "/images/project_e-commerce.png",
     tags: ["MySQL", "Express", "Node", "Sequelize"],
     source: "https://github.com/seba-sanchis/e-commerce",
-    visit: "url",
+    visit: "https://e-commerce.sebastiansanchis.com/",
     id: 0,
   },
   {
     title: "Social Media",
     description:
-      "Full CRUD app to upload your posts and manage them. You must first register or sign in with your Google account.",
+      "Full CRUD app to upload your posts and manage them. You must first register or sign in with Google account.",
     image: "/images/project_social-media.png",
     tags: ["MongoDB", "Express", "React", "Redux", "Node", "Sass"],
     source: "https://github.com/seba-sanchis/social-media",
@@ -51,7 +51,7 @@ export const projects = [
     image: "/images/project_portfolio.png",
     tags: ["React", "Next", "styled-components", "Node"],
     source: "https://github.com/seba-sanchis/portfolio",
-    visit: "/",
+    visit: null,
     id: 2,
   },
 ];

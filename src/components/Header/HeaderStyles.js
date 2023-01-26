@@ -48,6 +48,9 @@ export const Span = styled.span`
   font-weight: 400;
   line-height: 18px;
   padding-left: ${(props) => (props.sidenav ? "18px" : null)};
+  cursor: pointer;
+  flex-wrap: wrap;
+  max-width: fit-content;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     display: ${(props) => (props.sidenav ? null : "none")};

@@ -84,26 +84,32 @@ export const UtilityList = styled.ul`
   margin-top: 24px;
 `;
 
-export const ExternalButton = styled.button`
+export const ExternalButton = styled.a`
   color: #fff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   padding: 12px 20px;
   border-radius: 4px;
-  background-color: #1967d2;
+  background-color: ${(props) => (props.disabled ? "#dadce0" : "#1967d2")};
   transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);
   border: none;
   cursor: pointer;
 
   &:hover {
-    background: linear-gradient(0deg, rgb(25 24 24 / 16%), rgb(25 24 24 / 16%)),
-      #1967d2;
+    background: linear-gradient(0deg, rgb(25 24 24 / 16%), rgb(25 24 24 / 16%));
     box-shadow: 0 1px 2px rgb(66 63 63 / 30%), 0 1px 3px 1px rgb(66 63 63 / 15%);
+    background-color: ${(props) => (props.disabled ? "#dadce0" : "#1967d2")};
   }
 
-  &:disabled {
-    background-color: #dadce0;
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background: linear-gradient(0deg, rgb(25 24 24 / 20%), rgb(25 24 24 / 20%));
+    box-shadow: 0 1px 2px rgb(66 63 63 / 30%), 0 2px 6px 2px rgb(66 63 63 / 15%);
+    background-color: ${(props) => (props.disabled ? "#dadce0" : "#1967d2")};
   }
 `;
 
