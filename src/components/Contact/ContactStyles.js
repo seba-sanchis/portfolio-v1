@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-  display: flex;
+  display: ${(props) => (props.hide ? "none" : "flex" )};
   flex-direction: column;
   align-items: center;
 `;
@@ -70,7 +70,7 @@ export const TextArea = styled.textarea`
 `;
 
 export const SuccessContainer = styled.div`
-  display: flex;
+  display: ${(props) => (props.hide ? "none" : "flex" )};
   flex-direction: column;
   align-items: center;
   justify-content: center;
