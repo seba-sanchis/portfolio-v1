@@ -135,17 +135,10 @@ export const ExternalLink = styled.a`
   }
 `;
 
-export const TagList = styled.ul`
-  display: flex;
-  justify-content: space-around;
-`;
-
-export const Tag = styled.li`
-  font-weight: 500;
+export const Technologies = styled.div`
   font-size: 12px;
-  line-height: 18px;
-  border-radius: 20px;
-  padding: 2px 8px;
-  background-color: #e8f0fe;
-  color: #1967d2;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  hyphens: auto;
+  margin-top: 4px;
 `;

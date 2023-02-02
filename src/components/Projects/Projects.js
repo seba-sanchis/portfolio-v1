@@ -7,18 +7,21 @@ import {
   ExternalLink,
   GridContainer,
   HeaderThree,
-  Tag,
-  TagList,
+  Technologies,
   TitleContent,
   UtilityList,
   Img,
   ImgContainer,
 } from "./ProjectsStyles";
 import { HiChevronRight } from "react-icons/hi";
-import { Section, SectionTitle, SectionText } from "../../styles/GlobalComponents";
+import {
+  Section,
+  SectionTitle,
+  SectionText,
+} from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
 
-const Projects = ({projectsRef}) => (
+const Projects = ({ projectsRef }) => (
   <Section id="projects" ref={projectsRef}>
     <SectionTitle>Projects</SectionTitle>
     <SectionText>
@@ -27,7 +30,7 @@ const Projects = ({projectsRef}) => (
     </SectionText>
     <GridContainer>
       {projects.map(
-        ({ id, image, title, description, tags, source, visit }) => (
+        ({ id, image, title, description, technologies, source, visit }) => (
           <BlogCard key={id}>
             <ImgContainer>
               <Img src={image} />
@@ -36,13 +39,9 @@ const Projects = ({projectsRef}) => (
               <HeaderThree>{title}</HeaderThree>
             </TitleContent>
             <CardInfo>{description}</CardInfo>
-            <div>
-              <TagList>
-                {tags.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
-                ))}
-              </TagList>
-            </div>
+            <Technologies>
+              {technologies}
+            </Technologies>
             <UtilityList>
               <ExternalButton
                 href={visit}

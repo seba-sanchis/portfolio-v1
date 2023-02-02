@@ -29,7 +29,7 @@ export const projects = [
     description:
       "SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
     image: "/images/project_portfolio.png",
-    tags: ["Next", "React", "styled-components"],
+    technologies: "Next, React, styled-components.",
     source: "https://github.com/seba-sanchis/portfolio",
     visit: null,
     id: 2,
@@ -39,7 +39,7 @@ export const projects = [
     description:
       "Full CRUD app to upload your posts and manage them. You must first register or sign in with Google account.",
     image: "/images/project_social-media.png",
-    tags: ["MongoDB", "Express", "React", "Redux", "Node", "Sass"],
+    technologies: "MongoDB, Express, React, Redux, Node, Sass.",
     source: "https://github.com/seba-sanchis/social-media",
     visit: "https://social-media.sebastiansanchis.com/",
     id: 1,
@@ -49,7 +49,7 @@ export const projects = [
     description:
       "Designed to search up-to-date results, images, videos and news fetching data from Bing Web Search using RapidAPI.",
     image: "/images/project_search-engine.png",
-    tags: ["React", "Tailwind CSS"],
+    technologies: "React, Tailwind CSS.",
     source: "https://github.com/seba-sanchis/search-engine",
     visit: "https://search-engine.sebastiansanchis.com/",
     id: 1,
