@@ -25,14 +25,14 @@ export const about = { me: "Sebastian Sanchis", logo: "/svg/logo.svg", photo: "/
 
 export const projects = [
   {
-    title: "E-commerce",
+    title: "Portfolio",
     description:
-      "Digital House integrative project developed over the course of 8 sprints under the SCRUM methodology.",
-    image: "/images/project_e-commerce.png",
-    tags: ["MySQL", "Express", "Node", "Sequelize"],
-    source: "https://github.com/seba-sanchis/e-commerce",
-    visit: "https://e-commerce.sebastiansanchis.com/",
-    id: 0,
+      "SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
+    image: "/images/project_portfolio.png",
+    tags: ["Next", "React", "styled-components"],
+    source: "https://github.com/seba-sanchis/portfolio",
+    visit: null,
+    id: 2,
   },
   {
     title: "Social Media",
@@ -45,14 +45,14 @@ export const projects = [
     id: 1,
   },
   {
-    title: "Portfolio",
+    title: "Search Engine",
     description:
-      "SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
-    image: "/images/project_portfolio.png",
-    tags: ["React", "Next", "styled-components", "Node"],
-    source: "https://github.com/seba-sanchis/portfolio",
-    visit: null,
-    id: 2,
+      "Designed to search up-to-date results, images, videos and news fetching data from Bing Web Search using RapidAPI.",
+    image: "/images/project_search-engine.png",
+    tags: ["React", "Tailwind CSS"],
+    source: "https://github.com/seba-sanchis/search-engine",
+    visit: "https://search-engine.sebastiansanchis.com/",
+    id: 1,
   },
 ];
 
@@ -63,7 +63,6 @@ export const stack = [
 ];
 
 export const skills = [
-  { stack: "Frontend", icon: SiAngular, technology: "Angular" },
   { stack: "Frontend", icon: DiCss3, technology: "CSS" },
   { stack: "Frontend", icon: DiHtml5, technology: "HTML" },
   { stack: "Frontend", icon: DiJavascript1, technology: "JavaScript" },

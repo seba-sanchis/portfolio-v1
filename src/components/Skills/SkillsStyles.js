@@ -77,9 +77,8 @@ export const ListExpand = styled.div`
 `;
 
 export const ListContent = styled.div`
-  display: flex;
-  padding: 0 2px 24px 2px;
   display: grid;
+  padding: 0 2px 24px 2px;
   grid-template-columns: repeat(4, minmax(5px, 1fr));
   grid-column-gap: 48px;
 
