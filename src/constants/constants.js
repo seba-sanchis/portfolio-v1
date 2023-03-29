@@ -1,45 +1,50 @@
-import { DiJavascript1, DiCss3, DiHtml5, DiSass } from "react-icons/di";
+import { DiCss3, DiHtml5, DiJavascript1, DiSass } from "react-icons/di";
 import {
-  SiAngular,
+  SiAdobexd,
   SiAmazonaws,
-  SiGooglecloud,
-  SiNextdotjs,
-  SiReact,
-  SiRedux,
-  SiStyledcomponents,
   SiExpress,
+  SiFigma,
+  SiGooglecloud,
+  SiGraphql,
+  SiInvision,
   SiJest,
+  SiMaterialui,
   SiMongodb,
   SiMysql,
+  SiNextdotjs,
   SiNodedotjs,
+  SiReact,
+  SiRedux,
   SiSequelize,
-  SiAdobexd,
-  SiFigma,
-  SiInvision,
   SiSketch,
+  SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 
-export const about = { me: "Sebastian Sanchis", logo: "/svg/logo.svg", photo: "/images/about_sebastian-sanchis.jpg" };
+export const about = {
+  me: "Sebastian Sanchis",
+  logo: "/assets/logo.svg",
+  photo: "/assets/about_sebastian-sanchis.jpg",
+};
 
 export const projects = [
   {
     title: "Portfolio",
     description:
       "SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
-    image: "/images/project_portfolio.png",
-    technologies: "Next, React, styled-components.",
+    image: "/assets/project_portfolio.png",
+    technologies: "NextJS, React, styled-components.",
     source: "https://github.com/seba-sanchis/portfolio",
     visit: null,
-    id: 2,
+    id: 0,
   },
   {
     title: "Social Media",
     description:
       "Full CRUD app to upload your posts and manage them. You must first register or sign in with Google account.",
-    image: "/images/project_social-media.png",
-    technologies: "MongoDB, Express, React, Redux, Node, Sass.",
+    image: "/assets/project_social-media.png",
+    technologies: "Express, MongoDB, React, Redux, Node, Sass.",
     source: "https://github.com/seba-sanchis/social-media",
     visit: "https://social-media.sebastiansanchis.com/",
     id: 1,
@@ -47,12 +52,30 @@ export const projects = [
   {
     title: "Search Engine",
     description:
-      "Designed to search up-to-date results, images, videos and news fetching data from Bing Web Search using RapidAPI.",
-    image: "/images/project_search-engine.png",
+      "Search up-to-date results, images, videos and news fetching data from Bing Web Search using RapidAPI.",
+    image: "/assets/project_search-engine.png",
     technologies: "React, Tailwind CSS.",
     source: "https://github.com/seba-sanchis/search-engine",
     visit: "https://search-engine.sebastiansanchis.com/",
-    id: 1,
+    id: 2,
+  },
+  {
+    title: "E-commerce",
+    description: "Features the ability to add and edit products on the go using Sanity and the integration with Stripe for checkout.",
+    image: "/assets/project_e-commerce.png",
+    technologies: "CSS, NextJS, React.",
+    source: "https://github.com/seba-sanchis/e-commerce",
+    visit: "https://e-commerce.sebastiansanchis.com/",
+    id: 3,
+  },
+  {
+    title: "Blog",
+    description: "Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.",
+    image: "/assets/project_blog.png",
+    technologies: "GraphQL, NextJS, React, Tailwind CSS.",
+    source: "https://github.com/seba-sanchis/blog",
+    visit: "https://blog.sebastiansanchis.com/",
+    id: 4,
   },
 ];
 
@@ -64,10 +87,12 @@ export const stack = [
 
 export const skills = [
   { stack: "Frontend", icon: DiCss3, technology: "CSS" },
+  { stack: "Frontend", icon: SiGraphql, technology: "GraphQL" },
   { stack: "Frontend", icon: DiHtml5, technology: "HTML" },
   { stack: "Frontend", icon: DiJavascript1, technology: "JavaScript" },
   { stack: "Frontend", icon: SiJest, technology: "Jest" },
-  { stack: "Frontend", icon: SiNextdotjs, technology: "Next" },
+  { stack: "Frontend", icon: SiMaterialui, technology: "Material UI" },
+  { stack: "Frontend", icon: SiNextdotjs, technology: "NextJS" },
   { stack: "Frontend", icon: SiReact, technology: "React" },
   { stack: "Frontend", icon: SiRedux, technology: "Redux" },
   { stack: "Frontend", icon: DiSass, technology: "Sass" },
@@ -105,7 +130,7 @@ export const education = [
     school: "Digital House",
     description: "Educational institution",
     study: "SOLID",
-    image: "/images/education_digital-house.jpg",
+    image: "/assets/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
       "SRP: Single Responsibility Principle",
@@ -121,7 +146,7 @@ export const education = [
     school: "Digital House",
     description: "Educational institution",
     study: "Software Design Patterns",
-    image: "/images/education_digital-house.jpg",
+    image: "/assets/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
       "Pattern Types: Creational, Structural, and Behavioral.",
@@ -136,7 +161,7 @@ export const education = [
     school: "Digital House",
     description: "Educational institution",
     study: "Object-Oriented Programming (OOP)",
-    image: "/images/education_digital-house.jpg",
+    image: "/assets/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
       "OOP with JavaScript and TypeScript.",
@@ -150,7 +175,7 @@ export const education = [
     school: "Digital House",
     description: "Educational institution",
     study: "Deployment with Amazon Web Services (AWS)",
-    image: "/images/education_digital-house.jpg",
+    image: "/assets/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
       "Client–server model",
@@ -174,7 +199,7 @@ export const education = [
     school: "Digital House",
     description: "Educational institution",
     study: "Payment Gateway Integration (Mercado Pago)",
-    image: "/images/education_digital-house.jpg",
+    image: "/assets/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
       "Integrations with online stores",
@@ -189,7 +214,7 @@ export const education = [
     school: "Digital House",
     description: "Educational institution",
     study: "Test-Driven Development (TDD)",
-    image: "/images/education_digital-house.jpg",
+    image: "/assets/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
       "Automated testing",
@@ -204,7 +229,7 @@ export const education = [
     school: "Meta",
     description: "Technology company",
     study: "Front-End Development",
-    image: "/images/education_meta.jpg",
+    image: "/assets/education_meta.jpg",
     link: "https://g.co/kgs/u63y1h",
     skill: [
       "Describe the web developer job role.",
@@ -226,7 +251,7 @@ export const education = [
     school: "Google",
     description: "Technology company",
     study: "Web Development",
-    image: "/images/education_google.png",
+    image: "/assets/education_google.png",
     link: "https://g.co/kgs/RUqd6f",
     skill: [
       "Web history.",
@@ -246,7 +271,7 @@ export const education = [
     school: "Digital House",
     description: "Educational institution",
     study: "Full Stack Web Developer",
-    image: "/images/education_digital-house.jpg",
+    image: "/assets/education_digital-house.jpg",
     link: "https://g.co/kgs/cZRwaL",
     skill: [
       "CSS",
@@ -272,7 +297,7 @@ export const education = [
     school: "Coder House",
     description: "Educational institution",
     study: "UI/UX Designer",
-    image: "/images/education_coder-house.jpg",
+    image: "/assets/education_coder-house.jpg",
     link: "https://g.co/kgs/XkngZy",
     skill: [
       "Atomic Design",

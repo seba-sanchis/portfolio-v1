@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ImgContainer = styled.div`
   background-color: #f8f9fa;
-  border-radius: 20px;
+  border-radius: 8px;
 `;
 
 export const Img = styled.img`
@@ -10,7 +10,7 @@ export const Img = styled.img`
   height: 100%;
   object-fit: cover;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 8px;
 `;
 
 export const GridContainer = styled.div`
