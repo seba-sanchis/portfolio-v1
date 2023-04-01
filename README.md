@@ -16,13 +16,13 @@ Open the .env file and type the following variables:
 
 ## Available Scripts
 
-Install packages and all dependencies for both client and server side.
+Install packages and all dependencies.
 
 ```bash
     npm i
 ```
 
-Runs the app in the development mode for both client and server side.
+Runs the app in the development mode.
 
 ```bash
     npm run dev
