@@ -4,9 +4,9 @@ SSG that allows you to upload your projects and share your skills. They can cont
 
 ## Setups
 
-Before you start, you will need to create the <code>.env.local</code> file in the root folder to connect the Email.js SDK.
+Before you start, you will need to create the <code>.env</code> file in the root folder to connect the Email.js SDK.
 
-Open the .env.local file and type the following variables:
+Open the .env file and type the following variables:
 
 ```bash
     SERVICE_ID = *add your service ID*
