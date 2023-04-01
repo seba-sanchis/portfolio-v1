@@ -1,4 +1,4 @@
-# Portfolio -  Personal development portfolio
+# Portfolio -  personal development portfolio
 
 SSG that allows you to upload your projects and share your skills. They can contact you through the form.
 
