@@ -20,6 +20,7 @@ import {
   ErrorContainer,
   Error,
 } from "./ContactStyles";
+import { contact } from "../../constants/constants";
 
 const Contact = ({ contactRef }) => {
   const [formData, setFormData] = useState({
@@ -237,7 +238,7 @@ const Contact = ({ contactRef }) => {
       <SuccessContainer
         hide={Object.keys(formErrors).length !== 0 || !formSubmit}
       >
-        <Image src="/images/contact_email.png" />
+        <Image src={contact.image} />
         <SuccessMessage>Message sent.</SuccessMessage>
       </SuccessContainer>
     </Section>

@@ -61,7 +61,8 @@ export const projects = [
   },
   {
     title: "E-commerce",
-    description: "Features the ability to add and edit products on the go using Sanity and the integration with Stripe for checkout.",
+    description:
+      "Features the ability to add and edit products on the go using Sanity and the integration with Stripe for checkout.",
     image: "/assets/project_e-commerce.png",
     technologies: "CSS, NextJS, React.",
     source: "https://github.com/seba-sanchis/e-commerce",
@@ -70,7 +71,8 @@ export const projects = [
   },
   {
     title: "Blog",
-    description: "Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.",
+    description:
+      "Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.",
     image: "/assets/project_blog.png",
     technologies: "GraphQL, NextJS, React, Tailwind CSS.",
     source: "https://github.com/seba-sanchis/blog",
@@ -314,3 +316,7 @@ export const education = [
     ],
   },
 ];
+
+export const contact = {
+  image: "/assets/contact_email.png",
+};
