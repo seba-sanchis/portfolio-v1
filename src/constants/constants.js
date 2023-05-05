@@ -34,7 +34,7 @@ export const projects = [
     description:
       "SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
     image: "/assets/project_portfolio.png",
-    technologies: "NextJS, React, styled-components.",
+    technologies: "NextJS, styled-components.",
     source: "https://github.com/seba-sanchis/portfolio",
     visit: null,
     id: 0,
@@ -64,7 +64,7 @@ export const projects = [
     description:
       "Features the ability to add and edit products on the go using Sanity and the integration with Stripe for checkout.",
     image: "/assets/project_e-commerce.png",
-    technologies: "CSS, NextJS, React.",
+    technologies: "CSS, NextJS.",
     source: "https://github.com/seba-sanchis/e-commerce",
     visit: "https://e-commerce.sebastiansanchis.com/",
     id: 3,
@@ -74,7 +74,7 @@ export const projects = [
     description:
       "Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.",
     image: "/assets/project_blog.png",
-    technologies: "GraphQL, NextJS, React, Tailwind CSS.",
+    technologies: "GraphQL, NextJS, Tailwind CSS.",
     source: "https://github.com/seba-sanchis/blog",
     visit: "https://blog.sebastiansanchis.com/",
     id: 4,

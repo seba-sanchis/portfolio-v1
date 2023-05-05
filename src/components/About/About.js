@@ -14,15 +14,29 @@ const About = ({ aboutRef }) => {
       <Container>
         <LeftSection>
           <SectionTitle>About me</SectionTitle>
+          <SectionText maxwith>
+            My passion for web development started a few years ago when I first
+            discovered the power of HTML, CSS, and JavaScript in bringing
+            creative designs to life. Since then, I've honed my skills and
+            expertise by working on a variety of projects for different clients.
+          </SectionText>
+          <SectionText maxwith>
+            As a frontend developer, I pride myself on my attention to detail,
+            creativity, and ability to solve complex problems. I enjoy working
+            with clients to understand their needs and translate their ideas
+            into beautiful, functional designs that exceed their expectations.
+          </SectionText>
+          <SectionText maxwith>
+            In my free time, I love to stay up-to-date with the latest web
+            development trends and technologies, and experiment with new tools
+            and frameworks to expand my knowledge and skills. I believe that
+            continuous learning is essential in a field that is constantly
+            evolving.
+          </SectionText>
           <SectionText maxwith nopadding>
-            I am a very organized and detailed person who constantly seeks to
-            continue learning tools that allow me to contribute to the creation
-            of products. I really enjoy being part of a team where everyone is
-            fully committed and dedicated to creating great quality code and
-            making sure everything runs smoothly.
-            <br />I currently live in San Isidro, Buenos Aires and I am looking
-            for a personal and professional challenge by undertaking dynamic and
-            innovative roles.
+            I'm excited to share my portfolio with you and showcase some of my
+            best work as a frontend developer. Thank you for your time and I
+            look forward to connecting with you!
           </SectionText>
         </LeftSection>
         <Portrait src={about.photo} />

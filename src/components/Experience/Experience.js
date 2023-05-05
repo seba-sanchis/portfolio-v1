@@ -14,10 +14,13 @@ const Experience = ({ experienceRef }) => {
         <SectionTitle>Experience</SectionTitle>
         <SectionText></SectionText>
         <Statement>
-          I have been doing projects in a team and individually for more than a year,
-          applying in each of them new technologies and methodologies that allow
-          me to grow in my approach as a Frontend Developer. <br /> I'm eager to have
-          my first developer experience! Wanna talk?
+          I have 1 year of experience creating visually appealing and
+          user-friendly websites. Proficient in HTML, CSS, and JavaScript, I
+          have successfully translated design mockups into responsive
+          interfaces. With a collaborative mindset, I have worked alongside
+          designers, writers and backend developers to deliver exceptional
+          results. Passionate about continuous learning, I stay updated on the
+          latest industry trends and technologies.
         </Statement>
       </Background>
     </Section>
