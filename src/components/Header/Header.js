@@ -145,17 +145,17 @@ const Header = ({ sectionRefs, headerRef }) => {
         ></SectionSelected>
       </Nav>
       <SocialIcons>
-        <Icon nomargin href="https://github.com/seba-sanchis" target="_blank">
+        <Icon nomargin href={about.gitHub} target="_blank">
           <AiFillGithub size="3rem" />
         </Icon>
         <Icon
-          href="https://www.linkedin.com/in/sebastian-sanchis/"
+          href={about.linkedIn}
           target="_blank"
         >
           <AiFillLinkedin size="3rem" />
         </Icon>
         <Icon
-          href="https://drive.google.com/file/d/1gB9A1LZdpYeXp_pepnQn0MWJRiM9o7jk/view?usp=sharing"
+          href={about.resume}
           target="_blank"
         >
           <AiFillFilePdf size="3rem" />
