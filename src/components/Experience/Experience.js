@@ -5,7 +5,7 @@ import {
   SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import { Background, Statement } from "./ExperienceStyles";
+import { Article, Background, Image, Statement } from "./ExperienceStyles";
 
 const Experience = ({ experienceRef }) => {
   return (
@@ -13,15 +13,18 @@ const Experience = ({ experienceRef }) => {
       <Background>
         <SectionTitle>Experience</SectionTitle>
         <SectionText></SectionText>
-        <Statement>
-          I have 3 years of experience creating visually appealing and
-          user-friendly websites. Proficient in HTML, CSS, and JavaScript, I
-          have successfully translated design mockups into responsive
-          interfaces. With a collaborative mindset, I have worked alongside
-          designers, writers and backend developers to deliver exceptional
-          results. Passionate about continuous learning, I stay updated on the
-          latest industry trends and technologies.
-        </Statement>
+        <Article>
+          <Statement>
+            I have 3 years of experience creating visually appealing and
+            user-friendly websites. Proficient in HTML, CSS, and JavaScript, I
+            have successfully translated design mockups into responsive
+            interfaces. With a collaborative mindset, I have worked alongside
+            designers, writers and backend developers to deliver exceptional
+            results. Passionate about continuous learning, I stay updated on the
+            latest industry trends and technologies.
+          </Statement>
+          <Image src="/assets/brand_nextjs.png" />
+        </Article>
       </Background>
     </Section>
   );

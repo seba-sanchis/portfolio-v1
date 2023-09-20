@@ -123,7 +123,7 @@ const Header = ({ sectionRefs, headerRef }) => {
         </Menu>
         <Link href="/">
           <Span>
-            <Portrait src={about.photo} />
+            <Portrait src={about.logo} />
             {about.me}
           </Span>
         </Link>

@@ -25,8 +25,8 @@ import {
 
 export const about = {
   me: "Sebastian Sanchis",
-  logo: "/assets/logo.svg",
-  photo: "/assets/about_sebastian-sanchis.jpg",
+  logo: "/assets/about_me-01.jpg",
+  photo: "/assets/about_me-02.jpg",
   gitHub: "https://github.com/seba-sanchis",
   linkedIn: "https://www.linkedin.com/in/sebastian-sanchis/",
   resume:
@@ -88,20 +88,20 @@ export const projects = [
     title: "Dashboard",
     description:
       "Complete CRUD app for uploading clients and managing their purchased products. Initial sign-in required via Google account.",
-    image: "/assets/project_blog.png",
+    image: "/assets/project_dashboard.png",
     technologies: "NextJS 13, Tailwind CSS, Typescript.",
-    source: "https://github.com/seba-sanchis/blog",
-    visit: "https://blog.sebastiansanchis.com/",
+    source: "https://github.com/seba-sanchis/dashboard",
+    visit: "https://dashboard.sebastiansanchis.com/",
     id: 0,
   },
   {
     title: "E-commerce",
     description:
       "Enables favoriting, easy cart management, and seamless checkout through Mercado Pago integration.",
-    image: "/assets/project_blog.png",
+    image: "/assets/project_e-commerce.png",
     technologies: "NextJS 13, Tailwind CSS, Typescript.",
-    source: "https://github.com/seba-sanchis/blog",
-    visit: "https://blog.sebastiansanchis.com/",
+    source: "https://github.com/seba-sanchis/e-commerce",
+    visit: "https://e-commerce.sebastiansanchis.com/",
     id: 0,
   },
 ];
