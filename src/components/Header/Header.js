@@ -24,6 +24,8 @@ import {
   NavSections,
   NavSection,
   Backdrop,
+  Features,
+  Portrait,
 } from "./HeaderStyles";
 
 import { about } from "../../constants/constants";
@@ -113,77 +115,73 @@ const Header = ({ sectionRefs, headerRef }) => {
       scrollTop={scrollTop}
       ref={headerRef}
     >
-      <Menu onClick={handleSidenav}>
-        <MenuIcon>
-          <AiOutlineMenu size="3rem" />
-        </MenuIcon>
-      </Menu>
-      <Link href="/">
-        <Span>
-          <Logo src={about.logo} />
-          {about.me}
-        </Span>
-      </Link>
-      <Nav>
-        <Sections>
-          {sectionRefs.map((item, index) => (
-            <Section key={index} selected={item.section === visibleSection}>
-              <Link href={item.link}>{item.section}</Link>
-            </Section>
-          ))}
-        </Sections>
-        <SectionSelected
-          scrollTop={scrollTop}
-          scrollDown={scrollDirection === "down"}
-          atHome={visibleSection === "Home"}
-          atAbout={visibleSection === "About"}
-          atProjects={visibleSection === "Projects"}
-          atSkills={visibleSection === "Skills"}
-          atExperience={visibleSection === "Experience"}
-          atEducation={visibleSection === "Education"}
-          atContact={visibleSection === "Contact"}
-        ></SectionSelected>
-      </Nav>
-      <SocialIcons>
-        <Icon nomargin href={about.gitHub} target="_blank">
-          <AiFillGithub size="3rem" />
-        </Icon>
-        <Icon
-          href={about.linkedIn}
-          target="_blank"
-        >
-          <AiFillLinkedin size="3rem" />
-        </Icon>
-        <Icon
-          href={about.resume}
-          target="_blank"
-        >
-          <AiFillFilePdf size="3rem" />
-        </Icon>
-      </SocialIcons>
+      <Features>
+        <Menu onClick={handleSidenav}>
+          <MenuIcon>
+            <AiOutlineMenu size="3rem" />
+          </MenuIcon>
+        </Menu>
+        <Link href="/">
+          <Span>
+            <Portrait src={about.photo} />
+            {about.me}
+          </Span>
+        </Link>
+        <Nav>
+          <Sections>
+            {sectionRefs.map((item, index) => (
+              <Section key={index} selected={item.section === visibleSection}>
+                <Link href={item.link}>{item.section}</Link>
+              </Section>
+            ))}
+          </Sections>
+          <SectionSelected
+            scrollTop={scrollTop}
+            scrollDown={scrollDirection === "down"}
+            atHome={visibleSection === "Home"}
+            atAbout={visibleSection === "About"}
+            atProjects={visibleSection === "Projects"}
+            atSkills={visibleSection === "Skills"}
+            atExperience={visibleSection === "Experience"}
+            atEducation={visibleSection === "Education"}
+            atContact={visibleSection === "Contact"}
+          ></SectionSelected>
+        </Nav>
+        <SocialIcons>
+          <Icon nomargin href={about.gitHub} target="_blank">
+            <AiFillGithub size="3rem" />
+          </Icon>
+          <Icon href={about.linkedIn} target="_blank">
+            <AiFillLinkedin size="3rem" />
+          </Icon>
+          <Icon href={about.resume} target="_blank">
+            <AiFillFilePdf size="3rem" />
+          </Icon>
+        </SocialIcons>
 
-      <Sidenav active={toggleSidenav} id="sidenav">
-        <NavHeader>
-          <Link href="/">
-            <Span sidenav>
-              <Logo src={about.logo} />
-              {about.me}
-            </Span>
-          </Link>
-        </NavHeader>
-        <NavSections>
-          {sectionRefs.map((item, index) => (
-            <NavSection
-              onClick={handleSidenav}
-              key={index}
-              selected={item.section === visibleSection}
-            >
-              <Link href={item.link}>{item.section}</Link>
-            </NavSection>
-          ))}
-        </NavSections>
-      </Sidenav>
-      <Backdrop active={toggleSidenav} onClick={handleSidenav}></Backdrop>
+        <Sidenav active={toggleSidenav} id="sidenav">
+          <NavHeader>
+            <Link href="/">
+              <Span sidenav>
+                <Logo src={about.logo} />
+                {about.me}
+              </Span>
+            </Link>
+          </NavHeader>
+          <NavSections>
+            {sectionRefs.map((item, index) => (
+              <NavSection
+                onClick={handleSidenav}
+                key={index}
+                selected={item.section === visibleSection}
+              >
+                <Link href={item.link}>{item.section}</Link>
+              </NavSection>
+            ))}
+          </NavSections>
+        </Sidenav>
+        <Backdrop active={toggleSidenav} onClick={handleSidenav}></Backdrop>
+      </Features>
     </Container>
   );
 };

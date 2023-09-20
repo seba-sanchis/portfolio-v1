@@ -8,11 +8,12 @@ import {
   SiGraphql,
   SiInvision,
   SiJest,
-  SiMaterialui,
   SiMongodb,
+  SiMongoose,
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
   SiReact,
   SiRedux,
   SiSequelize,
@@ -28,59 +29,80 @@ export const about = {
   photo: "/assets/about_sebastian-sanchis.jpg",
   gitHub: "https://github.com/seba-sanchis",
   linkedIn: "https://www.linkedin.com/in/sebastian-sanchis/",
-  resume: "https://drive.google.com/file/d/1kN_hCDW8_VqRYq3qi69Lck1BGRzBBrbs/view?usp=share_link",
+  resume:
+    "https://drive.google.com/file/d/1kN_hCDW8_VqRYq3qi69Lck1BGRzBBrbs/view?usp=share_link",
 };
 
 export const projects = [
-  {
-    title: "Portfolio",
-    description:
-      "SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
-    image: "/assets/project_portfolio.png",
-    technologies: "NextJS, styled-components.",
-    source: "https://github.com/seba-sanchis/portfolio",
-    visit: null,
-    id: 0,
-  },
-  {
-    title: "Social Media",
-    description:
-      "Full CRUD app to upload your posts and manage them. You must first register or sign in with Google account.",
-    image: "/assets/project_social-media.png",
-    technologies: "Express, MongoDB, React, Redux, Node, Sass.",
-    source: "https://github.com/seba-sanchis/social-media",
-    visit: "https://social-media.sebastiansanchis.com/",
-    id: 1,
-  },
-  {
-    title: "Search Engine",
-    description:
-      "Search up-to-date results, images, videos and news fetching data from Bing Web Search using RapidAPI.",
-    image: "/assets/project_search-engine.png",
-    technologies: "React, Tailwind CSS.",
-    source: "https://github.com/seba-sanchis/search-engine",
-    visit: "https://search-engine.sebastiansanchis.com/",
-    id: 2,
-  },
-  {
-    title: "E-commerce",
-    description:
-      "Features the ability to add and edit products on the go using Sanity and the integration with Stripe for checkout.",
-    image: "/assets/project_e-commerce.png",
-    technologies: "CSS, NextJS.",
-    source: "https://github.com/seba-sanchis/e-commerce",
-    visit: "https://e-commerce.sebastiansanchis.com/",
-    id: 3,
-  },
+  // {
+  //   title: "Portfolio",
+  //   description:
+  //     "SSG that allows you to upload your projects and share your skills. They can contact you through the form.",
+  //   image: "/assets/project_portfolio.png",
+  //   technologies: "NextJS, styled-components.",
+  //   source: "https://github.com/seba-sanchis/portfolio",
+  //   visit: null,
+  //   id: 0,
+  // },
+  // {
+  //   title: "Social Media",
+  //   description:
+  //     "Full CRUD app to upload your posts and manage them. You must first register or sign in with Google account.",
+  //   image: "/assets/project_social-media.png",
+  //   technologies: "Express, MongoDB, React, Redux, Node, Sass.",
+  //   source: "https://github.com/seba-sanchis/social-media",
+  //   visit: "https://social-media.sebastiansanchis.com/",
+  //   id: 1,
+  // },
+  // {
+  //   title: "Search Engine",
+  //   description:
+  //     "Search up-to-date results, images, videos and news fetching data from Bing Web Search using RapidAPI.",
+  //   image: "/assets/project_search-engine.png",
+  //   technologies: "React, Tailwind CSS.",
+  //   source: "https://github.com/seba-sanchis/search-engine",
+  //   visit: "https://search-engine.sebastiansanchis.com/",
+  //   id: 2,
+  // },
+  // {
+  //   title: "E-commerce",
+  //   description:
+  //     "Features the ability to add and edit products on the go using Sanity and the integration with Stripe for checkout.",
+  //   image: "/assets/project_e-commerce.png",
+  //   technologies: "CSS, NextJS.",
+  //   source: "https://github.com/seba-sanchis/e-commerce",
+  //   visit: "https://e-commerce.sebastiansanchis.com/",
+  //   id: 3,
+  // },
   {
     title: "Blog",
     description:
       "Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.",
     image: "/assets/project_blog.png",
-    technologies: "GraphQL, NextJS, Tailwind CSS.",
+    technologies: "GraphQL, NextJS 12, Tailwind CSS.",
     source: "https://github.com/seba-sanchis/blog",
     visit: "https://blog.sebastiansanchis.com/",
-    id: 4,
+    id: 0,
+  },
+  {
+    title: "Dashboard",
+    description:
+      "Complete CRUD app for uploading clients and managing their purchased products. Initial sign-in required via Google account.",
+    image: "/assets/project_blog.png",
+    technologies: "NextJS 13, Tailwind CSS, Typescript.",
+    source: "https://github.com/seba-sanchis/blog",
+    visit: "https://blog.sebastiansanchis.com/",
+    id: 0,
+  },
+  {
+    title: "E-commerce",
+    description:
+      "Enables favoriting, easy cart management, and seamless checkout through Mercado Pago integration.",
+    image: "/assets/project_blog.png",
+    technologies: "NextJS 13, Tailwind CSS, Typescript.",
+    source: "https://github.com/seba-sanchis/blog",
+    visit: "https://blog.sebastiansanchis.com/",
+    id: 0,
   },
 ];
 
@@ -96,7 +118,7 @@ export const skills = [
   { stack: "Frontend", icon: DiHtml5, technology: "HTML" },
   { stack: "Frontend", icon: DiJavascript1, technology: "JavaScript" },
   { stack: "Frontend", icon: SiJest, technology: "Jest" },
-  { stack: "Frontend", icon: SiMaterialui, technology: "Material UI" },
+  // { stack: "Frontend", icon: SiMaterialui, technology: "Material UI" },
   { stack: "Frontend", icon: SiNextdotjs, technology: "NextJS" },
   { stack: "Frontend", icon: SiReact, technology: "React" },
   { stack: "Frontend", icon: SiRedux, technology: "Redux" },
@@ -111,13 +133,12 @@ export const skills = [
   { stack: "Backend", icon: SiAmazonaws, technology: "AWS" },
   { stack: "Backend", icon: SiExpress, technology: "Express" },
   { stack: "Backend", icon: SiGooglecloud, technology: "GCP" },
-  { stack: "Backend", icon: DiJavascript1, technology: "JavaScript" },
-  { stack: "Backend", icon: SiJest, technology: "Jest" },
   { stack: "Backend", icon: SiMongodb, technology: "MongoDB" },
-  { stack: "Backend", icon: SiMysql, technology: "MySQL" },
+  { stack: "Backend", icon: SiMongoose, technology: "Mongoose" },
+  // { stack: "Backend", icon: SiMysql, technology: "MySQL" },
   { stack: "Backend", icon: SiNodedotjs, technology: "Node" },
+  { stack: "Backend", icon: SiPostgresql, technology: "PostgreSQL" },
   { stack: "Backend", icon: SiSequelize, technology: "Sequelize" },
-  { stack: "Backend", icon: SiTypescript, technology: "Typescript" },
   { stack: "UI/UX", icon: SiAdobexd, technology: "Adobe Xd" },
   { stack: "UI/UX", icon: SiFigma, technology: "Figma" },
   { stack: "UI/UX", icon: SiInvision, technology: "Invision" },

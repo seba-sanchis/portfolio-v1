@@ -25,8 +25,7 @@ const Projects = ({ projectsRef }) => (
   <Section id="projects" ref={projectsRef}>
     <SectionTitle>Projects</SectionTitle>
     <SectionText>
-      These are the projects in which I was acquiring and implementing new
-      concepts.
+      These are some projects I have been working on for clients.
     </SectionText>
     <GridContainer>
       {projects.map(
@@ -39,9 +38,7 @@ const Projects = ({ projectsRef }) => (
               <HeaderThree>{title}</HeaderThree>
             </TitleContent>
             <CardInfo>{description}</CardInfo>
-            <Technologies>
-              {technologies}
-            </Technologies>
+            <Technologies>{technologies}</Technologies>
             <UtilityList>
               <ExternalButton
                 href={visit}

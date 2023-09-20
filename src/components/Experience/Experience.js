@@ -14,7 +14,7 @@ const Experience = ({ experienceRef }) => {
         <SectionTitle>Experience</SectionTitle>
         <SectionText></SectionText>
         <Statement>
-          I have 1 year of experience creating visually appealing and
+          I have 3 years of experience creating visually appealing and
           user-friendly websites. Proficient in HTML, CSS, and JavaScript, I
           have successfully translated design mockups into responsive
           interfaces. With a collaborative mindset, I have worked alongside

@@ -1,15 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
   background-color: #fff;
   width: 100%;
   height: 64px;
-  padding: 0 20px;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   /* transform: ${(props) =>
     props.scrollDown ? "translate3d(0,-140px,0)" : "none"}; */
@@ -25,6 +19,35 @@ export const Container = styled.header`
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
+  }
+`;
+
+export const Features = styled.header`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  padding: ${(props) => (props.main ? null : props.nopadding ? "0" : "0 48px")};
+`;
+
+export const Portrait = styled.img`
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    width: 100px;
+    height: 100px;
   }
 `;
 
@@ -140,7 +163,8 @@ export const SectionSelected = styled.div`
       : props.atContact
       ? "0"
       : null};
-  background-color: ${(props) => (props.atHome !== undefined ? "#4285f4" : null)};
+  background-color: ${(props) =>
+    props.atHome !== undefined ? "#4285f4" : null};
   transition: ${(props) =>
     props.scrollDown
       ? "left .35s cubic-bezier(.35,0,.25,1),right .18s cubic-bezier(.35,0,.25,1)"

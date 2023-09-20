@@ -15,6 +15,7 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
   max-width: 1280px;
   width: 100%;
+  padding: ${(props) => (props.main ? null : props.nopadding ? "0" : "0 48px")};
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     flex-direction: column;
