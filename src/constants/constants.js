@@ -28,7 +28,7 @@ export const about = {
   photo: "/assets/about_sebastian-sanchis.jpg",
   gitHub: "https://github.com/seba-sanchis",
   linkedIn: "https://www.linkedin.com/in/sebastian-sanchis/",
-  resume: "https://drive.google.com/file/d/1D_QGEXRI-lH49Y8PKSL0Ap4hw5fVLXCO/view?usp=share_link",
+  resume: "https://drive.google.com/file/d/1kN_hCDW8_VqRYq3qi69Lck1BGRzBBrbs/view?usp=share_link",
 };
 
 export const projects = [
