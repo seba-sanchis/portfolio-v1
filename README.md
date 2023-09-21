@@ -1,4 +1,4 @@
-# Portfolio -  personal development portfolio
+# Portfolio -  Personal development portfolio.
 
 SSG that allows you to upload your projects and share your skills. They can contact you through the form.
 
@@ -34,11 +34,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 To learn more about this project, take a look at the following resources:
 
-- [Email.js](https://www.emailjs.com/) - send emails using client-side technologies only.
-- [Next.js](https://nextjs.org/) - open-source web development framework providing React-based web applications with server-side rendering and static website generation.
-- [React](https://reactjs.org/) - open-source frontend JavaScript library for building user interfaces based on components.
-- [styled-components](https://styled-components.com/) - utilising tagged template literals and the power of CSS, styled-components allows you to write actual CSS code to style your components.
+- [Email.js](https://www.emailjs.com/) - Send emails using client-side technologies only.
+- [Next.js](https://nextjs.org/) - Web development framework providing React-based web applications with server-side rendering and static website generation.
+- [React](https://reactjs.org/) - Frontend JavaScript library for building user interfaces based on components.
+- [styled-components](https://styled-components.com/) - Utilising tagged template literals and the power of CSS, styled-components allows you to write actual CSS code to style your components.
 
 ## Deployment
 
-Application hosted on AWS: https://www.sebastiansanchis.com/
+Application hosted on AWS Lambda: https://www.sebastiansanchis.com/
