@@ -34,9 +34,9 @@ export default class MyDocument extends Document {
           {/* Open Graph */}
           <meta property="og:title" content="Portfolio: Sebastian Sanchis" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="/assets/about_sebastian-sanchis.jpg" />
+          <meta property="og:image" content="/assets/about_me-02.jpg" />
           <meta property="og:url" content="https://www.sebastiansanchis.com/" />
-    
+
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
