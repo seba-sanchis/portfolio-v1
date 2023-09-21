@@ -21,7 +21,7 @@ const Home = ({ homeRef }) => (
         deliver a seamless user experience. Please take a look at my portfolio
         to see some of my latest work.
       </SectionText>
-      {/* <Button onClick={() => (window.location = "#contact")}>Contact me</Button> */}
+      <Button onClick={() => (window.location = "#contact")}>Contact me</Button>
     </LeftSection>
   </Section>
 );
