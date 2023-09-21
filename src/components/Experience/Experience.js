@@ -13,7 +13,7 @@ const Experience = ({ experienceRef }) => {
       <Background>
         <SectionTitle>Experience</SectionTitle>
         <SectionText></SectionText>
-        <Article>
+        {/* <Article> */}
           <Statement>
             I have 3 years of experience creating visually appealing and
             user-friendly websites. Proficient in HTML, CSS, and JavaScript, I
@@ -23,8 +23,8 @@ const Experience = ({ experienceRef }) => {
             results. Passionate about continuous learning, I stay updated on the
             latest industry trends and technologies.
           </Statement>
-          <Image src="/assets/brand_nextjs.png" />
-        </Article>
+          {/* <Image src="/assets/brand_nextjs.png" /> */}
+        {/* </Article> */}
       </Background>
     </Section>
   );

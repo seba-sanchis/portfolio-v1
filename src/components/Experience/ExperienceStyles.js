@@ -13,6 +13,8 @@ export const Background = styled.div`
 
 export const Article = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Statement = styled.p`
@@ -23,6 +25,7 @@ export const Statement = styled.p`
   max-width: 900px;
   color: #5f6368;
   margin: 0 auto;
+  text-align: center;
 `;
 
 export const Image = styled.img`
