@@ -147,6 +147,7 @@ export const skills = [
 
 export const experience = [
   { year: 2022, position: "Frontend Developer", company: "ConoSurIT" },
+  { year: 2023, position: "Frontend Developer", company: "Proficient" },
 ];
 
 export const education = [

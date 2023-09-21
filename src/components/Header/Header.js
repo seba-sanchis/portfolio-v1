@@ -72,10 +72,10 @@ const Header = ({ sectionRefs, headerRef }) => {
   }, [visibleSection]);
 
   useEffect(() => {
-    let lastScrollY = window.pageYOffset;
+    let lastScrollY = window.scrollY;
 
     const updateScrollDirection = (e) => {
-      const scrollY = window.pageYOffset;
+      const scrollY = window.scrollY;
       const direction = scrollY > lastScrollY ? "down" : "up";
 
       if (
@@ -131,7 +131,7 @@ const Header = ({ sectionRefs, headerRef }) => {
           <Sections>
             {sectionRefs.map((item, index) => (
               <Section key={index} selected={item.section === visibleSection}>
-                <Link href={item.link}>{item.section}</Link>
+                <a href={item.link}>{item.section}</a>
               </Section>
             ))}
           </Sections>
@@ -175,7 +175,7 @@ const Header = ({ sectionRefs, headerRef }) => {
                 key={index}
                 selected={item.section === visibleSection}
               >
-                <Link href={item.link}>{item.section}</Link>
+                <a href={item.link}>{item.section}</a>
               </NavSection>
             ))}
           </NavSections>
