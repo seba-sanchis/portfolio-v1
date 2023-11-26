@@ -36,7 +36,7 @@ const Skills = ({skillsRef}) => {
     <Section id="skills" ref={skillsRef}>
       <SectionTitle>Skills</SectionTitle>
       <SectionText>
-        These are the skills that I have been learning since last year by taking
+        These are the skills that I have been learning by taking
         courses, attending workshops and practicing on my own.
       </SectionText>
       <List>
