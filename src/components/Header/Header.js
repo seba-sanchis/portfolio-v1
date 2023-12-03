@@ -13,6 +13,7 @@ import {
   MenuIcon,
   Logo,
   Span,
+  Paragraph,
   Nav,
   Sections,
   Section,
@@ -124,7 +125,7 @@ const Header = ({ sectionRefs, headerRef }) => {
         <Link href="/">
           <Span>
             <Portrait src={about.logo} />
-            {about.me}
+            <Paragraph>{about.me}</Paragraph>
           </Span>
         </Link>
         <Nav>

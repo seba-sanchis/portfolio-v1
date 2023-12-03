@@ -25,12 +25,12 @@ import {
 
 export const about = {
   me: "Sebastian Sanchis",
-  logo: "/assets/about_me-01.jpg",
+  logo: "/assets/briefcase.svg",
   photo: "/assets/about_me-02.jpg",
   gitHub: "https://github.com/seba-sanchis",
   linkedIn: "https://www.linkedin.com/in/sebastian-sanchis/",
   resume:
-    "https://drive.google.com/file/d/13mpf07kDFxtLvFpqeQZDid6pTtSORPBU/view?usp=share_link",
+    "https://drive.google.com/file/d/1Zg9QISQdrpJlcbR6Oi5k2Or8H9GwSE9L/view?usp=share_link",
 };
 
 export const projects = [
@@ -128,7 +128,7 @@ export const skills = [
     icon: SiStyledcomponents,
     technology: "styled-components",
   },
-  { stack: "Frontend", icon: SiTailwindcss, technology: "Tailwind CSS" },
+  { stack: "Frontend", icon: SiTailwindcss, technology: "TailwindCSS" },
   { stack: "Frontend", icon: SiTypescript, technology: "Typescript" },
   { stack: "Backend", icon: SiAmazonaws, technology: "AWS" },
   { stack: "Backend", icon: SiExpress, technology: "Express" },
