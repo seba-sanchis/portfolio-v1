@@ -84,8 +84,10 @@ export const Paragraph = styled.p`
 `;
 
 export const Logo = styled.img`
-  width: 30px;
-  height: 30px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 `;
 
 export const Nav = styled.nav`
