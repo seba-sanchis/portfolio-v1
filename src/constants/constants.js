@@ -39,7 +39,7 @@ export const projects = [
   {
     title: "Blog",
     description:
-      "Headless CMS App built with a query languaje and managed from Hygraph, a dedicated Content Management System.",
+      "Effortless content delivery with Hygraph, a powerful Headless CMS for sharing insightful articles and engaging stories.",
     image: "/assets/project_blog.png",
     technologies: "GraphQL, NextJS, Tailwind CSS.",
     source: "https://github.com/seba-sanchis/blog",
