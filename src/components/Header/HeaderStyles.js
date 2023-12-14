@@ -33,8 +33,8 @@ export const Features = styled.header`
 
 export const Portrait = styled.img`
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 8px;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
