@@ -102,8 +102,23 @@ export const skills = [
 ];
 
 export const experience = [
-  { year: 2022, position: "Frontend Developer", company: "ConoSurIT" },
-  { year: 2023, position: "Frontend Developer", company: "Proficient" },
+  {
+    startDate: "Sep 2017",
+    endDate: "Aug 2023",
+    company: "Vulcano S.A.",
+    description: "Consumer Goods",
+    position: "Project Web Manager",
+    image: "/assets/experience_vulcano.jpg",
+    link: "http://vulcano-sa.com",
+    skill: [
+      "Lead a team in a good work environment.",
+      "Develop short and long term roadmaps aligned to the company's business plans.",
+      "Plan the tasks of the team, coordinating with different areas and giving the necessary visibility to the competent people.",
+      "Organize the working group to meet the objectives in a timely manner.",
+      "Collaborate in the generation of the new website together with development, design and writing professionals.",
+      "Participate in the complete development cycle of the website and guarantee excellence in execution.",
+    ],
+  },
 ];
 
 export const education = [
