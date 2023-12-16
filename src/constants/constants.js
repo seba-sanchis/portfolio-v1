@@ -59,7 +59,7 @@ export const projects = [
   {
     title: "E-commerce",
     description:
-      "Facilitates cart management, seamless checkout, and receives updated content from the connected Dashboard.",
+      "Facilitates cart management, seamless checkout, and receives updated content from the connected CMS.",
     image: "/assets/project_e-commerce.png",
     technologies: "NextJS, Tailwind CSS, Typescript.",
     source: "https://github.com/seba-sanchis/e-commerce",
