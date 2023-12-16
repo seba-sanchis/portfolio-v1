@@ -47,13 +47,13 @@ export const projects = [
     id: 0,
   },
   {
-    title: "Dashboard",
+    title: "CMS",
     description:
-      "Dynamic app syncing with E-commerce. Intuitive interface for sales metrics, content data, and inventory management.",
-    image: "/assets/project_dashboard.png",
+      "Dynamic app syncing with E-commerce. Intuitive interface for sales metrics, content and inventory management.",
+    image: "/assets/project_cms.png",
     technologies: "Angular, Sass, Typescript.",
-    source: "https://github.com/seba-sanchis/dashboard",
-    visit: "https://dashboard.sebastiansanchis.com/",
+    source: "https://github.com/seba-sanchis/cms",
+    visit: "https://cms.sebastiansanchis.com/",
     id: 1,
   },
   {
