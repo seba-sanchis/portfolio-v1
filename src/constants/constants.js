@@ -32,7 +32,7 @@ export const about = {
   gitHub: "https://github.com/seba-sanchis",
   linkedIn: "https://www.linkedin.com/in/sebastian-sanchis/",
   resume:
-    "https://drive.google.com/file/d/1evRqVme7rHrO82Rz5cy8Is3M0IfoVDFG/view?usp=share_link",
+    "https://drive.google.com/file/d/1KeCo82c9wxOCCIp_sh6udcm5Gti9-fMg/view?usp=share_link",
 };
 
 export const projects = [
