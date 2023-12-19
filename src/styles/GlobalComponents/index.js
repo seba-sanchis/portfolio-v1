@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Section = styled.section`
   display: ${(props) => (props.grid ? "grid" : "flex")};
   flex-direction: column;
-  padding: ${(props) => (props.main ? null : props.nopadding ? "115px 0 60px" : "115px 48px 60px")};
+  padding: ${(props) =>
+    props.main ? null : props.nopadding ? "115px 0 60px" : "115px 48px 60px"};
   margin: 80px auto;
   position: relative;
   overflow: hidden;
@@ -12,12 +13,14 @@ export const Section = styled.section`
   grid-template-columns: 1fr 1fr;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    padding: ${(props) => (props.main ? null : props.nopadding ? "100px 0 0" : "100px 48px 0")};
+    padding: ${(props) =>
+      props.main ? null : props.nopadding ? "100px 0 0" : "100px 48px 0"};
     grid-template-columns: none;
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: ${(props) => (props.main ? null : props.nopadding ? "85px 0 0" : "85px 16px 0")};
+    padding: ${(props) =>
+      props.main ? null : props.nopadding ? "85px 0 0" : "85px 16px 0"};
     grid-template-columns: none;
     width: calc(100vw - 32px);
   }
@@ -58,7 +61,7 @@ export const SectionText = styled.p`
 
 export const Button = styled.button`
   margin: ${(props) => (props.margin ? "6px 0" : "0")};
-  border-radius: 4px;
+  border-radius: 8px;
   color: #fff;
   display: flex;
   position: relative;
@@ -115,40 +118,5 @@ export const Button = styled.button`
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     font-size: 14px;
-  }
-`;
-
-export const LinkContainer = styled.div`
-  margin-left: ${({ large }) => (large ? "24px" : "16px")};
-  transition: 0.3s ease;
-  justify-content: center;
-  border-radius: 50px;
-  padding: 8px;
-
-  &:hover {
-    background-color: #212d45;
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    margin-left: ${({ large }) => (large ? "16px" : "8px")};
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    margin-left: ${({ large }) => (large ? "0" : "8px")};
-  }
-`;
-
-export const LinkIconImg = styled.div`
-  display: flex;
-  height: ${({ large }) => (large ? "32px" : "24px")};
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    height: ${({ nav }) => (nav ? "16px" : "24px")};
-  }
-
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    height: ${({ large }) => (large ? "32px" : "16px")};
   }
 `;

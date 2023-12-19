@@ -29,7 +29,7 @@ export const GridContainer = styled.div`
 `;
 
 export const BlogCard = styled.div`
-  border-radius: 10px;
+  border-radius: 8px;
   width: 290px;
   justify-self: center;
 
@@ -90,7 +90,7 @@ export const ExternalButton = styled.a`
   line-height: 24px;
   font-weight: 500;
   padding: 12px 20px;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: ${(props) => (props.disabled ? "#dadce0" : "#1967d2")};
   transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);
   border: none;
@@ -121,7 +121,7 @@ export const ExternalLink = styled.a`
   padding: 6px 8px;
   display: inline-flex;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all 250ms cubic-bezier(0.1, 0.1, 0, 1);
   margin-left: 16px;
 

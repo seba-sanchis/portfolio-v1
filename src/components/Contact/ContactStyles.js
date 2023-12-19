@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-  display: ${(props) => (props.hide ? "none" : "flex" )};
+  display: ${(props) => (props.hide ? "none" : "flex")};
   flex-direction: column;
   align-items: center;
 `;
 
 export const InputContainer = styled.div`
-  border: ${(props) => props.error ? "1px solid #d93025" : "1px solid #dadce0"};
-  border-radius: 4px;
+  border: ${(props) =>
+    props.error ? "1px solid #d93025" : "1px solid #dadce0"};
+  border-radius: 8px;
   height: ${(props) => (props.area ? "168px" : "56px")};
   width: 100%;
   max-width: 500px;
@@ -16,7 +17,8 @@ export const InputContainer = styled.div`
   display: flex;
   align-items: ${(props) => (props.area ? "start" : "center")};
   &:focus-within {
-    border: ${(props) => props.error ? "2px solid #d93025" : "2px solid #1967d2"};
+    border: ${(props) =>
+      props.error ? "2px solid #d93025" : "2px solid #1967d2"};
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
@@ -43,13 +45,16 @@ export const Placeholder = styled.div`
   background: #fff;
   margin-top: ${(props) => (props.area ? "15px" : null)};
   margin-left: 8px;
-  color: ${(props) => props.error ? "#d93025" : props.blur ? "#1967d2" : "#5f6368"};
+  color: ${(props) =>
+    props.error ? "#d93025" : props.blur ? "#1967d2" : "#5f6368"};
   font-size: 16px;
   font-weight: 400;
   padding: 0 8px;
   position: absolute;
-  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: ${(props) => (props.focus ? "scale(0.75) translateY(-35px)" : null)};
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: ${(props) =>
+    props.focus ? "scale(0.75) translateY(-35px)" : null};
   transform-origin: bottom left;
   z-index: ${(props) => (props.focus ? "3" : "1")};
 `;
@@ -70,7 +75,7 @@ export const TextArea = styled.textarea`
 `;
 
 export const SuccessContainer = styled.div`
-  display: ${(props) => (props.hide ? "none" : "flex" )};
+  display: ${(props) => (props.hide ? "none" : "flex")};
   flex-direction: column;
   align-items: center;
   justify-content: center;
